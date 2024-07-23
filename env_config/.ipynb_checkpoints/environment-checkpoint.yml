@@ -1,0 +1,14 @@
+name: py37
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - ipykernel
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - tensorflow=1.15
+  - pip:
+    - some-pip-package

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/root/final_ex/literacy/dhsincountry/DHS_Incountry_A_ms_samescaled_b64_fc01_conv01_lr001/ckpt-178"
+all_model_checkpoint_paths: "/root/final_ex/literacy/dhsincountry/DHS_Incountry_A_ms_samescaled_b64_fc01_conv01_lr001/ckpt-178"

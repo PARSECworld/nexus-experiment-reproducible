@@ -1,0 +1,33 @@
+{
+    "experiment_name": "DHS_Incountry_B_ms_samescaled",
+    "out_dir": "/root/final_ex/literacy/dhsincountry/",
+    "init_ckpt_dir": null,
+    "imagenet_weights_path": "/root/resnet/ImageNet-ResNet18.npz",
+    "hs_weight_init": "samescaled",
+    "exclude_final_layer": false,
+    "label_name": "income",
+    "batch_size": 64,
+    "augment": true,
+    "fc_reg": 0.1,
+    "conv_reg": 0.1,
+    "lr": 0.001,
+    "lr_decay": 0.96,
+    "model_name": "resnet",
+    "num_layers": 18,
+    "dataset": "DHS_incountry_B",
+    "ooc": false,
+    "keep_frac": 1.0,
+    "ls_bands": "ms",
+    "nl_band": null,
+    "gpu": 0,
+    "num_threads": 5,
+    "cache": [
+        "train",
+        "train_eval",
+        "val"
+    ],
+    "max_epochs": 200,
+    "eval_every": 1,
+    "print_every": 40,
+    "seed": 123
+}

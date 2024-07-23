@@ -1,0 +1,2 @@
+model_checkpoint_path: "/root/final_ex/income/dhsincountry/DHS_Incountry_E_ms_samescaled_200_b64_fc001_conv001_lr0001/ckpt-66"
+all_model_checkpoint_paths: "/root/final_ex/income/dhsincountry/DHS_Incountry_E_ms_samescaled_200_b64_fc001_conv001_lr0001/ckpt-66"
