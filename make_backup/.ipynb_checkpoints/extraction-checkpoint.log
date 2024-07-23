@@ -1,0 +1,9 @@
+2023-10-30 23:48:58,213 - INFO - Iniciando a extração do arquivo: ./ModelWorkflow.tar.gz
+2023-10-30 23:49:04,652 - INFO - Extração do arquivo ModelWorkflow.tar.gz concluída (1 de todos).
+2023-10-30 23:49:04,654 - INFO - Iniciando a extração do arquivo: ./final_ex.tar.gz
+2023-10-30 23:50:35,861 - INFO - Extração do arquivo final_ex.tar.gz concluída (2 de todos).
+2023-10-30 23:50:35,862 - INFO - Iniciando a extração do arquivo: ./logs.tar.gz
+2023-10-30 23:50:38,531 - INFO - Extração do arquivo logs.tar.gz concluída (3 de todos).
+2023-10-30 23:50:38,531 - INFO - Iniciando a extração do arquivo: ./resnet.tar.gz
+2023-10-30 23:50:39,876 - INFO - Extração do arquivo resnet.tar.gz concluída (4 de todos).
+2023-10-30 23:50:39,877 - INFO - Iniciando a extração do arquivo: ./Datasets.tar.gz

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/root/final_ex/dhsincountry/DHS_Incountry_E_nl_random_b64_fc1_conv1.0_lr001/ckpt-73"
+all_model_checkpoint_paths: "/root/final_ex/dhsincountry/DHS_Incountry_E_nl_random_b64_fc1_conv1.0_lr001/ckpt-73"

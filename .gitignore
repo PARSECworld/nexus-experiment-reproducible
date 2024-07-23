@@ -1,0 +1,14 @@
+.meta
+ckpt*
+*.pdf
+_*
+*.0_lr0001
+*.dbf
+*.prj
+*.shp
+*.shx
+*.gz
+*.csv
+*.xlsx
+*.feather
+*.parquet
