@@ -1,0 +1,3 @@
+outs:
+- md5: 28ad6803482c8352d018c5c02526f7d5
+  path: country_urban.csv
