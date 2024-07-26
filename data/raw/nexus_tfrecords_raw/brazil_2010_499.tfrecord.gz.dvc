@@ -1,0 +1,3 @@
+outs:
+- md5: 2eebd6d862255f3522247c72cc651293
+  path: brazil_2010_499.tfrecord.gz

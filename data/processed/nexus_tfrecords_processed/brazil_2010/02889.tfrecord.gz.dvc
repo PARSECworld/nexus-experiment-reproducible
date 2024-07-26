@@ -1,0 +1,3 @@
+outs:
+- md5: f4561e20255a39c22deabf15a9cb54ac
+  path: 02889.tfrecord.gz

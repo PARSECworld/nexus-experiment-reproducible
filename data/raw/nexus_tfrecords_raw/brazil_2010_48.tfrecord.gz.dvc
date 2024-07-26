@@ -1,0 +1,3 @@
+outs:
+- md5: c58cbb9b6793e3f54e99e2313c178b5a
+  path: brazil_2010_48.tfrecord.gz

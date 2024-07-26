@@ -1,4 +1,5 @@
-.meta
+*.npz
+*.meta
 ckpt*
 *.pdf
 _*

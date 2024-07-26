@@ -1,0 +1,211 @@
+import argparse
+import logging
+import os
+
+from dvc.command import completion
+from dvc.command.base import CmdBase, append_doc_link
+from dvc.command.metrics import _show_metrics
+from dvc.command.status import CmdDataStatus
+from dvc.dvcfile import PIPELINE_FILE
+from dvc.exceptions import DvcException
+
+logger = logging.getLogger(__name__)
+
+
+class CmdRepro(CmdBase):
+    def run(self):
+        saved_dir = os.path.realpath(os.curdir)
+        os.chdir(self.args.cwd)
+
+        # Dirty hack so the for loop below can at least enter once
+        if self.args.all_pipelines:
+            self.args.targets = [None]
+        elif not self.args.targets:
+            self.args.targets = self.default_targets
+
+        ret = 0
+        for target in self.args.targets:
+            try:
+                stages = self.repo.reproduce(
+                    target,
+                    single_item=self.args.single_item,
+                    force=self.args.force,
+                    dry=self.args.dry,
+                    interactive=self.args.interactive,
+                    pipeline=self.args.pipeline,
+                    all_pipelines=self.args.all_pipelines,
+                    run_cache=not self.args.no_run_cache,
+                    no_commit=self.args.no_commit,
+                    downstream=self.args.downstream,
+                    recursive=self.args.recursive,
+                    force_downstream=self.args.force_downstream,
+                    experiment=self.args.experiment,
+                    queue=self.args.queue,
+                    run_all=self.args.run_all,
+                    jobs=self.args.jobs,
+                    params=self.args.params,
+                    pull=self.args.pull,
+                )
+
+                if len(stages) == 0:
+                    logger.info(CmdDataStatus.UP_TO_DATE_MSG)
+
+                if self.args.metrics:
+                    metrics = self.repo.metrics.show()
+                    logger.info(_show_metrics(metrics))
+
+            except DvcException:
+                logger.exception("")
+                ret = 1
+                break
+
+        os.chdir(saved_dir)
+        return ret
+
+
+def add_parser(subparsers, parent_parser):
+    REPRO_HELP = (
+        "Reproduce complete or partial pipelines by executing their stages."
+    )
+    repro_parser = subparsers.add_parser(
+        "repro",
+        parents=[parent_parser],
+        description=append_doc_link(REPRO_HELP, "repro"),
+        help=REPRO_HELP,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    repro_parser.add_argument(
+        "targets",
+        nargs="*",
+        help=f"Stages to reproduce. '{PIPELINE_FILE}' by default.",
+    ).complete = completion.DVC_FILE
+    repro_parser.add_argument(
+        "-f",
+        "--force",
+        action="store_true",
+        default=False,
+        help="Reproduce even if dependencies were not changed.",
+    )
+    repro_parser.add_argument(
+        "-s",
+        "--single-item",
+        action="store_true",
+        default=False,
+        help="Reproduce only single data item without recursive dependencies "
+        "check.",
+    )
+    repro_parser.add_argument(
+        "-c",
+        "--cwd",
+        default=os.path.curdir,
+        help="Directory within your repo to reproduce from. Note: deprecated "
+        "by `dvc --cd <path>`.",
+        metavar="<path>",
+    )
+    repro_parser.add_argument(
+        "-m",
+        "--metrics",
+        action="store_true",
+        default=False,
+        help="Show metrics after reproduction.",
+    )
+    repro_parser.add_argument(
+        "--dry",
+        action="store_true",
+        default=False,
+        help="Only print the commands that would be executed without "
+        "actually executing.",
+    )
+    repro_parser.add_argument(
+        "-i",
+        "--interactive",
+        action="store_true",
+        default=False,
+        help="Ask for confirmation before reproducing each stage.",
+    )
+    repro_parser.add_argument(
+        "-p",
+        "--pipeline",
+        action="store_true",
+        default=False,
+        help="Reproduce the whole pipeline that the specified stage file "
+        "belongs to.",
+    )
+    repro_parser.add_argument(
+        "-P",
+        "--all-pipelines",
+        action="store_true",
+        default=False,
+        help="Reproduce all pipelines in the repo.",
+    )
+    repro_parser.add_argument(
+        "-R",
+        "--recursive",
+        action="store_true",
+        default=False,
+        help="Reproduce all stages in the specified directory.",
+    )
+    repro_parser.add_argument(
+        "--no-run-cache",
+        action="store_true",
+        default=False,
+        help=(
+            "Execute stage commands even if they have already been run with "
+            "the same command/dependencies/outputs/etc before."
+        ),
+    )
+    repro_parser.add_argument(
+        "--force-downstream",
+        action="store_true",
+        default=False,
+        help="Reproduce all descendants of a changed stage even if their "
+        "direct dependencies didn't change.",
+    )
+    repro_parser.add_argument(
+        "--no-commit",
+        action="store_true",
+        default=False,
+        help="Don't put files/directories into cache.",
+    )
+    repro_parser.add_argument(
+        "--downstream",
+        action="store_true",
+        default=False,
+        help="Start from the specified stages when reproducing pipelines.",
+    )
+    repro_parser.add_argument(
+        "-e",
+        "--experiment",
+        action="store_true",
+        default=False,
+        help=argparse.SUPPRESS,
+    )
+    repro_parser.add_argument(
+        "--params",
+        action="append",
+        default=[],
+        help=argparse.SUPPRESS,
+        metavar="[<filename>:]<params_list>",
+    )
+    repro_parser.add_argument(
+        "--queue", action="store_true", default=False, help=argparse.SUPPRESS
+    )
+    repro_parser.add_argument(
+        "--run-all",
+        action="store_true",
+        default=False,
+        help=argparse.SUPPRESS,
+    )
+    repro_parser.add_argument(
+        "-j", "--jobs", type=int, help=argparse.SUPPRESS, metavar="<number>"
+    )
+    repro_parser.add_argument(
+        "--pull",
+        action="store_true",
+        default=False,
+        help=(
+            "Try automatically pulling missing cache for outputs restored "
+            "from the run-cache."
+        ),
+    )
+    repro_parser.set_defaults(func=CmdRepro)
