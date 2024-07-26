@@ -1,25 +1,5 @@
-Início: Fri Jul 26 17:40:41 UTC 2024
-ERROR: unrecognized arguments: -F
-usage: dvc remote add [-h] [--global | --system | --local] [-q | -v] [-d] [-f]
-                      name url
-
-Add a new data remote.
-Documentation: <https://man.dvc.org/remote/add>
-
-positional arguments:
-  name           Name of the remote
-  url            Remote location. See full list of supported URLs at
-                 <https://man.dvc.org/remote>
-
-optional arguments:
-  -h, --help     show this help message and exit
-  --global       Use global config.
-  --system       Use system config.
-  --local        Use local config.
-  -q, --quiet    Be quiet.
-  -v, --verbose  Be verbose.
-  -d, --default  Set as default remote.
-  -f, --force    Force overwriting existing configs
+Início: Fri Jul 26 17:59:13 UTC 2024
+Setting 'myremote' as a default remote.
 Setting 'myremote' as a default remote.
 Stage is cached, skipping
 Stage is cached, skipping
@@ -33,186 +13,974 @@ ERROR: unexpected error - disk I/O error
 
 Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
 
-real	3m9.020s
-user	1m11.411s
-sys	0m8.238s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	3m27.293s
+user	1m12.323s
+sys	0m8.992s
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.227s
-user	0m0.646s
-sys	0m0.109s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	0m56.543s
+user	0m19.675s
+sys	0m2.749s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.064s
-user	0m0.606s
-sys	0m0.122s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	2m9.425s
+user	0m46.063s
+sys	0m5.821s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.123s
-user	0m0.627s
-sys	0m0.135s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m19.856s
+user	0m28.012s
+sys	0m3.874s
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.081s
-user	0m0.615s
-sys	0m0.132s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	0m55.441s
+user	0m19.433s
+sys	0m2.664s
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.301s
-user	0m0.662s
-sys	0m0.133s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	0m56.130s
+user	0m19.643s
+sys	0m2.657s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+ERROR: unexpected error - disk I/O error
 
-real	0m4.182s
-user	0m0.662s
-sys	0m0.129s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
 
-real	0m4.244s
-user	0m0.650s
-sys	0m0.128s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	209m19.406s
+user	75m13.337s
+sys	8m48.862s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.105s
-user	0m0.581s
-sys	0m0.161s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	5m20.861s
+user	2m0.182s
+sys	0m14.033s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.225s
-user	0m0.620s
-sys	0m0.159s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.082s
+user	0m26.656s
+sys	0m3.187s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.133s
-user	0m0.647s
-sys	0m0.123s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.136s
+user	0m26.309s
+sys	0m3.392s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.115s
-user	0m0.600s
-sys	0m0.171s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.505s
+user	0m26.488s
+sys	0m3.450s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.286s
-user	0m0.667s
-sys	0m0.129s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.450s
+user	0m26.496s
+sys	0m3.294s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.182s
-user	0m0.628s
-sys	0m0.150s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.009s
+user	0m26.243s
+sys	0m3.434s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.144s
-user	0m0.645s
-sys	0m0.128s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.251s
+user	0m26.761s
+sys	0m3.314s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.061s
-user	0m0.625s
-sys	0m0.130s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.265s
+user	0m26.748s
+sys	0m3.208s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.267s
-user	0m0.628s
-sys	0m0.153s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.148s
+user	0m26.294s
+sys	0m3.395s
+ERROR: stage working dir '/home/sagemaker-user/reproducible/data/raw/setores_shapefile/go_setores_censitarios' does not exist
 
-real	0m4.242s
-user	0m0.635s
-sys	0m0.143s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	0m1.094s
+user	0m0.446s
+sys	0m0.094s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.229s
-user	0m0.636s
-sys	0m0.123s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.974s
+user	0m26.649s
+sys	0m3.266s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.106s
-user	0m0.623s
-sys	0m0.117s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m12.302s
+user	0m26.636s
+sys	0m3.384s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.206s
-user	0m0.621s
-sys	0m0.149s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.497s
+user	0m26.454s
+sys	0m3.423s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.186s
-user	0m0.585s
-sys	0m0.166s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.729s
+user	0m26.242s
+sys	0m3.529s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.191s
-user	0m0.666s
-sys	0m0.102s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.216s
+user	0m26.515s
+sys	0m3.302s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.230s
-user	0m0.671s
-sys	0m0.112s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.578s
+user	0m26.551s
+sys	0m3.307s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.195s
-user	0m0.652s
-sys	0m0.120s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.303s
+user	0m26.345s
+sys	0m3.435s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.432s
-user	0m0.654s
-sys	0m0.155s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.645s
+user	0m26.768s
+sys	0m3.234s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.276s
-user	0m0.650s
-sys	0m0.114s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.713s
+user	0m26.692s
+sys	0m3.292s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.363s
-user	0m0.634s
-sys	0m0.135s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.734s
+user	0m26.430s
+sys	0m3.302s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.291s
-user	0m0.664s
-sys	0m0.124s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m11.392s
+user	0m26.420s
+sys	0m3.399s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.057s
-user	0m0.579s
-sys	0m0.162s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.032s
+user	0m26.251s
+sys	0m3.368s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.236s
-user	0m0.628s
-sys	0m0.141s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.047s
+user	0m26.541s
+sys	0m3.176s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.277s
-user	0m0.676s
-sys	0m0.122s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.968s
+user	0m26.634s
+sys	0m3.219s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.046s
-user	0m0.619s
-sys	0m0.136s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m10.151s
+user	0m26.418s
+sys	0m3.294s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.215s
-user	0m0.640s
-sys	0m0.136s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.715s
+user	0m26.456s
+sys	0m3.349s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.151s
-user	0m0.614s
-sys	0m0.141s
-ERROR: cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.413s
+user	0m26.295s
+sys	0m3.445s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
 
-real	0m4.714s
-user	0m1.214s
-sys	0m0.178s
-ERROR: failed to push data to the cloud - cannot perform the command because another DVC process seems to be running on this project. If that is not the case, manually remove `.dvc/tmp/lock` and try again.
+real	1m9.853s
+user	0m26.447s
+sys	0m3.319s
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+Stage is cached, skipping
+ERROR: unexpected error - database disk image is malformed
 
-real	0m4.311s
-user	0m0.658s
-sys	0m0.148s
+Having any troubles? Hit us up at https://dvc.org/support, we are always happy to help!
+
+real	34m3.420s
+user	12m53.025s
+sys	1m29.392s
+5541 files pushed
+
+real	5m36.450s
+user	3m17.675s
+sys	2m34.492s

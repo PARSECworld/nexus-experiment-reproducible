@@ -19,7 +19,6 @@ rm -f output.log nohup.out
   fi
 
   # Configurar o remote do DVC
-  dvc remote add -d myremote s3://mestrado-leandro/nexus_reproducible_dvc/ -F
   echo "Setting 'myremote' as a default remote."
 
   # Remover arquivos de lock corrompidos
