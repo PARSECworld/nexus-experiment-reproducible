@@ -1,3 +1,17 @@
+meta:
+  bounding_box: !!python/tuple
+  - -48.285791068245096
+  - -16.050264262643697
+  - -47.3083869870584
+  - -15.500255153363002
+  checksum: 63cc648812066339ff3a74566525b9fc
+  creation_date: '2024-07-26T21:51:17.669000'
+  crs:
+    init: epsg:4674
+  description: Shapefile 53SEE250GC_SIR.shp
+  file_size: 5028124
+  format: shp
+  number_of_records: 4454
 outs:
 - md5: 63cc648812066339ff3a74566525b9fc
   path: 53SEE250GC_SIR.shp

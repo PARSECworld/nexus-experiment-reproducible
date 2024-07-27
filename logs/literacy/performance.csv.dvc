@@ -1,3 +1,17 @@
+meta:
+  checksum: a595d190e7f3aa6ee98e17b0face429f
+  column_names:
+  - 'Unnamed: 0'
+  - r2
+  - R2
+  - mse
+  - rank
+  creation_date: '2024-07-26T18:06:42.774000'
+  description: CSV file performance.csv
+  file_size: 1089
+  format: csv
+  number_of_columns: 5
+  number_of_records: 11
 outs:
 - md5: a595d190e7f3aa6ee98e17b0face429f
   path: performance.csv
