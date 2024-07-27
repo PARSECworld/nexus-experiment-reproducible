@@ -984,3 +984,19 @@ sys	1m29.392s
 real	5m36.450s
 user	3m17.675s
 sys	2m34.492s
+[develop de1e182f] Adicionando e empurrando arquivos para DVC e Git
+ 10 files changed, 986 insertions(+), 886 deletions(-)
+ delete mode 100644 .ipynb_checkpoints/add_dvc_backup-checkpoint.sh
+ delete mode 100644 .nfs20d34b789875b18600000019
+ rename .nfs1a91aef1e880f27b00000017 => .nfs3c67c3b36788ebd400000025 (100%)
+ delete mode 100644 .nfs6f4aaf8ca0dafbc60000001d
+ delete mode 100644 .nfs7d7ec40a4ef583d40000001c
+ delete mode 100644 .nfsa25b09ecfcaf3c7500000018
+ delete mode 100644 add_dvc_backup.sh
+ rewrite output.log (95%)
+fatal: The current branch develop has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin develop
+
+Término: Fri Jul 26 22:56:30 UTC 2024
