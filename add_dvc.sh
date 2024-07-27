@@ -61,13 +61,16 @@ rm -f output.log nohup.out
   time dvc add data/raw/setores_shapefile/sp_setores_censitarios/*.{dbf,prj,shp,shx}
   time dvc add data/raw/setores_shapefile/to_setores_censitarios/*.{dbf,prj,shp,shx}
   time dvc add data/processed/nexus_tfrecords_processed/brazil_2010/*.gz
-
+    
+  # Executando o script Python para gerar metadados  
+  time python generate_metadata.py
+  
   # Empurrar para armazenamento remoto
   time dvc push
 
   # Adicionar arquivos ao Git e fazer commit
   git add .
-  git commit -m "Adicionando e empurrando arquivos para DVC e Git"
+  git commit -m "Adding and pushing files to DVC and Git with metadata"
   git push
 
   echo "Término: $(date)"

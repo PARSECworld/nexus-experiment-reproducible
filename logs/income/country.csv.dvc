@@ -1,3 +1,18 @@
+meta:
+  checksum: 14bca131e2d9ffd3a4d7e2b59b964be8
+  column_names:
+  - country
+  - model
+  - r2
+  - R2
+  - mse
+  - rank
+  creation_date: '2024-07-26T18:04:09.346000'
+  description: CSV file country.csv
+  file_size: 1483
+  format: csv
+  number_of_columns: 6
+  number_of_records: 15
 outs:
 - md5: 14bca131e2d9ffd3a4d7e2b59b964be8
   path: country.csv

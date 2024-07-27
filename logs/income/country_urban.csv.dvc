@@ -1,3 +1,19 @@
+meta:
+  checksum: 28ad6803482c8352d018c5c02526f7d5
+  column_names:
+  - country
+  - urban
+  - model
+  - r2
+  - R2
+  - mse
+  - rank
+  creation_date: '2024-07-26T18:04:34.001000'
+  description: CSV file country_urban.csv
+  file_size: 1579
+  format: csv
+  number_of_columns: 7
+  number_of_records: 15
 outs:
 - md5: 28ad6803482c8352d018c5c02526f7d5
   path: country_urban.csv
