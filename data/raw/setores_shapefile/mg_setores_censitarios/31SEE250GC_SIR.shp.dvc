@@ -1,16 +1,17 @@
 meta:
-  bounding_box: !!python/tuple
+  bounding_box:
   - -51.0460818113752
   - -22.922755257699897
   - -39.8568288906276
   - -14.233180664193
   checksum: 7316d448502fac026d796a3ac71b45d0
-  creation_date: '2024-07-26T21:54:49.900000'
+  creation_date: '2024-07-30T10:18:36.611000'
   crs:
     init: epsg:4674
   description: Shapefile 31SEE250GC_SIR.shp
   file_size: 145873492
   format: shp
+  modification_date: '2024-07-26T04:31:10.548000'
   number_of_records: 32807
 outs:
 - md5: 7316d448502fac026d796a3ac71b45d0

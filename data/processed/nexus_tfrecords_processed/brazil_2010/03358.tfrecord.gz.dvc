@@ -1,3 +1,13 @@
+meta:
+  checksum: 7aaaf6e33832c708c547be256366750d
+  creation_date: '2024-07-25T17:10:50.111000'
+  description: TFRecord file 03358.tfrecord.gz
+  file_size: 816477
+  format: tfrecords.gz
+  modification_date: '2024-07-25T17:10:50.104000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 7aaaf6e33832c708c547be256366750d
   path: 03358.tfrecord.gz

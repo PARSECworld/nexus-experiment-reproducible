@@ -1,3 +1,13 @@
+meta:
+  checksum: ab8006ea96083063681559920ea66ec2
+  creation_date: '2024-07-25T12:29:10.721000'
+  description: TFRecord file 02269.tfrecord.gz
+  file_size: 835589
+  format: tfrecords.gz
+  modification_date: '2024-07-25T12:29:10.710000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ab8006ea96083063681559920ea66ec2
   path: 02269.tfrecord.gz

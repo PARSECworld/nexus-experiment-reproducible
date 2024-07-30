@@ -1,3 +1,13 @@
+meta:
+  checksum: cdc3e3ec1401da17d9a41bcb17a513eb
+  creation_date: '2024-07-25T10:48:09.498000'
+  description: TFRecord file 01812.tfrecord.gz
+  file_size: 793239
+  format: tfrecords.gz
+  modification_date: '2024-07-25T10:48:09.490000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: cdc3e3ec1401da17d9a41bcb17a513eb
   path: 01812.tfrecord.gz

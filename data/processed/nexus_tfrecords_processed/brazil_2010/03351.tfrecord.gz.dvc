@@ -1,3 +1,13 @@
+meta:
+  checksum: ccd169a598236941c00d1887c1906ace
+  creation_date: '2024-07-25T17:08:52.909000'
+  description: TFRecord file 03351.tfrecord.gz
+  file_size: 828355
+  format: tfrecords.gz
+  modification_date: '2024-07-25T17:08:52.902000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ccd169a598236941c00d1887c1906ace
   path: 03351.tfrecord.gz

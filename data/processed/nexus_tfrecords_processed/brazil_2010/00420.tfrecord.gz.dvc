@@ -1,3 +1,13 @@
+meta:
+  checksum: e46acc630e43f5a5a0385896644c1026
+  creation_date: '2024-07-26T20:33:48.776000'
+  description: TFRecord file 00420.tfrecord.gz
+  file_size: 986777
+  format: tfrecords.gz
+  modification_date: '2024-07-25T06:38:26.622000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: e46acc630e43f5a5a0385896644c1026
   path: 00420.tfrecord.gz

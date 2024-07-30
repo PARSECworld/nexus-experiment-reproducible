@@ -1,3 +1,31 @@
+meta:
+  checksum: a19b3bd999789f6d071afce7dd8fdc95
+  column_names:
+  - 'Unnamed: 0'
+  - lat
+  - lon
+  - country
+  - year
+  - urban
+  - label
+  - KNN NL center scalar
+  - KNN NL hist
+  - KNN NL mean scalar
+  - Resnet-18 MS
+  - Resnet-18 MS - E
+  - Ridge MS hist
+  - Ridge MS+NL hist
+  - Ridge NL hist
+  - Ridge NL mean scalar
+  - Ridge RGB hist
+  - Ridge RGB+NL hist
+  creation_date: '2024-07-30T04:11:22.596000'
+  description: CSV file alldata.csv
+  file_size: 5089677
+  format: csv
+  modification_date: '2024-07-25T04:14:25.620000'
+  number_of_columns: 18
+  number_of_records: 30000
 outs:
 - md5: a19b3bd999789f6d071afce7dd8fdc95
   path: alldata.csv

@@ -1,3 +1,13 @@
+meta:
+  checksum: a4925ca2fd21bbf2ab764abee7deec5c
+  creation_date: '2024-07-25T11:31:06.794000'
+  description: TFRecord file 02011.tfrecord.gz
+  file_size: 839206
+  format: tfrecords.gz
+  modification_date: '2024-07-25T11:31:06.787000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: a4925ca2fd21bbf2ab764abee7deec5c
   path: 02011.tfrecord.gz

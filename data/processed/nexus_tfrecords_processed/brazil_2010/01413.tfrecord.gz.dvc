@@ -1,3 +1,13 @@
+meta:
+  checksum: b45dec5d27511b2d4547a727e8870605
+  creation_date: '2024-07-25T09:27:32.193000'
+  description: TFRecord file 01413.tfrecord.gz
+  file_size: 947353
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:27:32.185000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: b45dec5d27511b2d4547a727e8870605
   path: 01413.tfrecord.gz

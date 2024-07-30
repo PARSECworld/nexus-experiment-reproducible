@@ -1,3 +1,13 @@
+meta:
+  checksum: fbc15ceb636c6acada179bfe9600531e
+  creation_date: '2024-07-26T05:04:12.054000'
+  description: TFRecord file 01063.tfrecord.gz
+  file_size: 922602
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:23:07.232000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: fbc15ceb636c6acada179bfe9600531e
   path: 01063.tfrecord.gz

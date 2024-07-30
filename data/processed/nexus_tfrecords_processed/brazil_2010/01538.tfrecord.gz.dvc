@@ -1,3 +1,13 @@
+meta:
+  checksum: ca660a29fda60564eae544e5eb202c85
+  creation_date: '2024-07-25T09:51:35.907000'
+  description: TFRecord file 01538.tfrecord.gz
+  file_size: 859902
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:51:35.900000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ca660a29fda60564eae544e5eb202c85
   path: 01538.tfrecord.gz

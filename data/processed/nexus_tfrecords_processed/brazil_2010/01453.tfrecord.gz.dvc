@@ -1,3 +1,13 @@
+meta:
+  checksum: f1b45d9050f4846381cfa715f13988e4
+  creation_date: '2024-07-25T09:35:06.916000'
+  description: TFRecord file 01453.tfrecord.gz
+  file_size: 824633
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:35:06.909000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: f1b45d9050f4846381cfa715f13988e4
   path: 01453.tfrecord.gz

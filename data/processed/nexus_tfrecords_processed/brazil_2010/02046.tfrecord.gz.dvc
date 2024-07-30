@@ -1,3 +1,13 @@
+meta:
+  checksum: 9c108a3813680a3a0515bc59ab380112
+  creation_date: '2024-07-25T11:38:44.393000'
+  description: TFRecord file 02046.tfrecord.gz
+  file_size: 856507
+  format: tfrecords.gz
+  modification_date: '2024-07-25T11:38:44.386000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 9c108a3813680a3a0515bc59ab380112
   path: 02046.tfrecord.gz

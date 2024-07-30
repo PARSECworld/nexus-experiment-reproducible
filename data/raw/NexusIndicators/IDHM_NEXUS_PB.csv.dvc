@@ -1,3 +1,18 @@
+meta:
+  checksum: cbfbe4842ea80e1370ff5265809d5d9d
+  column_names:
+  - 'Unnamed: 0'
+  - Cod_setor
+  - IDHL-Setor
+  - AlfabIDHM
+  - RendaIDHM
+  creation_date: '2024-07-30T09:58:26.516000'
+  description: CSV file IDHM_NEXUS_PB.csv
+  file_size: 281584
+  format: csv
+  modification_date: '2024-07-25T05:39:37.092000'
+  number_of_columns: 5
+  number_of_records: 3867
 outs:
 - md5: cbfbe4842ea80e1370ff5265809d5d9d
   path: IDHM_NEXUS_PB.csv

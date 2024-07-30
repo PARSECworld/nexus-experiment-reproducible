@@ -1,3 +1,22 @@
+meta:
+  checksum: 1eda939b970b8c8d8143bcfa3ac9595a
+  column_names:
+  - cod_sector
+  - Cod_municipio
+  - cod_state
+  - TIPO
+  - year
+  - income
+  - literacy
+  - longevity
+  - geometry
+  creation_date: '2024-07-30T04:13:13.353000'
+  description: CSV file NEXUS_data_2010.csv
+  file_size: 406640128
+  format: csv
+  modification_date: '2024-07-25T04:14:43.253000'
+  number_of_columns: 9
+  number_of_records: 109765
 outs:
 - md5: 1eda939b970b8c8d8143bcfa3ac9595a
   path: NEXUS_data_2010.csv

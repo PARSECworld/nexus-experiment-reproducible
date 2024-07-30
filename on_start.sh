@@ -4,6 +4,8 @@ apt-get install -y graphviz libgraphviz-dev pkg-config libffi-dev
 . /home/sagemaker-user/reproducible/nexus_experiment/bin/activate
 python -m ipykernel install --user --name nexus_experiment --display-name "Nexus Experiment"
 apt install git
+
+apt-get install nano
 # Verificar e configurar credenciais Git se necessário
 git remote set-url origin https://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@github.com/PARSECworld/nexus-reproducible.git
 
@@ -16,3 +18,5 @@ git config --global user.email "leoczzi@yahoo.com"
 git push --set-upstream origin develop
 
 deactivate
+
+bash

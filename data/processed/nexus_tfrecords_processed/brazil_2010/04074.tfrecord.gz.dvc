@@ -1,3 +1,13 @@
+meta:
+  checksum: caba6458366d58353e2664d241ed2c7b
+  creation_date: '2024-07-25T20:46:54.641000'
+  description: TFRecord file 04074.tfrecord.gz
+  file_size: 777323
+  format: tfrecords.gz
+  modification_date: '2024-07-25T20:46:54.634000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: caba6458366d58353e2664d241ed2c7b
   path: 04074.tfrecord.gz

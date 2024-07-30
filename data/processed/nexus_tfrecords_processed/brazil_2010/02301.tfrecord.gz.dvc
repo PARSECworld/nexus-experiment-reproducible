@@ -1,3 +1,13 @@
+meta:
+  checksum: e93cfeb90108f9f34109e38d495bdc76
+  creation_date: '2024-07-25T12:36:37.241000'
+  description: TFRecord file 02301.tfrecord.gz
+  file_size: 730533
+  format: tfrecords.gz
+  modification_date: '2024-07-25T12:36:37.234000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: e93cfeb90108f9f34109e38d495bdc76
   path: 02301.tfrecord.gz

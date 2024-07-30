@@ -1,3 +1,13 @@
+meta:
+  checksum: ac24b7e990e99578e3379a631290428e
+  creation_date: '2024-07-25T11:20:07.041000'
+  description: TFRecord file 01961.tfrecord.gz
+  file_size: 803291
+  format: tfrecords.gz
+  modification_date: '2024-07-25T11:20:07.034000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ac24b7e990e99578e3379a631290428e
   path: 01961.tfrecord.gz

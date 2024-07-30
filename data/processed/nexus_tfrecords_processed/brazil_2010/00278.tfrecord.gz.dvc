@@ -1,3 +1,13 @@
+meta:
+  checksum: 7bb0038fc87efb6522209dee916ad787
+  creation_date: '2024-07-26T19:35:52.924000'
+  description: TFRecord file 00278.tfrecord.gz
+  file_size: 1002014
+  format: tfrecords.gz
+  modification_date: '2024-07-25T06:18:16.006000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 7bb0038fc87efb6522209dee916ad787
   path: 00278.tfrecord.gz

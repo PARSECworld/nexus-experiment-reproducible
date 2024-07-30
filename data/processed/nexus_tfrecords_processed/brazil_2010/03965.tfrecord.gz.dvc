@@ -1,3 +1,13 @@
+meta:
+  checksum: ca765a00df493cbea191f698ae265260
+  creation_date: '2024-07-25T20:12:08.436000'
+  description: TFRecord file 03965.tfrecord.gz
+  file_size: 782237
+  format: tfrecords.gz
+  modification_date: '2024-07-25T20:12:08.427000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ca765a00df493cbea191f698ae265260
   path: 03965.tfrecord.gz

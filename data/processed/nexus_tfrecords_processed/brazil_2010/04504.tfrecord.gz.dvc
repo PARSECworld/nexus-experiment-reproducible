@@ -1,3 +1,13 @@
+meta:
+  checksum: c4064f3560ca552376af54217581900e
+  creation_date: '2024-07-25T23:14:25.776000'
+  description: TFRecord file 04504.tfrecord.gz
+  file_size: 802766
+  format: tfrecords.gz
+  modification_date: '2024-07-25T23:14:25.768000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: c4064f3560ca552376af54217581900e
   path: 04504.tfrecord.gz

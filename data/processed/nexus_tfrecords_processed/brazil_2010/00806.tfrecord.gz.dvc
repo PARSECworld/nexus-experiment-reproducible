@@ -1,3 +1,13 @@
+meta:
+  checksum: b7cc19fa203da52023dfeca043075001
+  creation_date: '2024-07-26T03:40:17.734000'
+  description: TFRecord file 00806.tfrecord.gz
+  file_size: 880135
+  format: tfrecords.gz
+  modification_date: '2024-07-25T07:39:10.450000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: b7cc19fa203da52023dfeca043075001
   path: 00806.tfrecord.gz

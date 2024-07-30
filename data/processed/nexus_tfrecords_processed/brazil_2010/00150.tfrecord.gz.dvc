@@ -1,3 +1,13 @@
+meta:
+  checksum: f428aff9345248b15e5da52df3f415ce
+  creation_date: '2024-07-26T18:43:22.357000'
+  description: TFRecord file 00150.tfrecord.gz
+  file_size: 828920
+  format: tfrecords.gz
+  modification_date: '2024-07-25T06:00:41.242000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: f428aff9345248b15e5da52df3f415ce
   path: 00150.tfrecord.gz

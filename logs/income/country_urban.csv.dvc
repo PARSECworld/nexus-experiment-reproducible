@@ -8,10 +8,11 @@ meta:
   - R2
   - mse
   - rank
-  creation_date: '2024-07-26T18:04:34.001000'
+  creation_date: '2024-07-30T04:09:48.263000'
   description: CSV file country_urban.csv
   file_size: 1579
   format: csv
+  modification_date: '2024-07-25T04:14:00.416000'
   number_of_columns: 7
   number_of_records: 15
 outs:

@@ -1,3 +1,13 @@
+meta:
+  checksum: cea032328e82a97c263c544223847d42
+  creation_date: '2024-07-25T12:42:40.083000'
+  description: TFRecord file 02327.tfrecord.gz
+  file_size: 840508
+  format: tfrecords.gz
+  modification_date: '2024-07-25T12:42:40.075000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: cea032328e82a97c263c544223847d42
   path: 02327.tfrecord.gz

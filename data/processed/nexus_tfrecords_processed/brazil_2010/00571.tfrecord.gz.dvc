@@ -1,3 +1,13 @@
+meta:
+  checksum: cbacb0d0b21b880136c46ec4144b16ec
+  creation_date: '2024-07-26T02:29:39.878000'
+  description: TFRecord file 00571.tfrecord.gz
+  file_size: 804974
+  format: tfrecords.gz
+  modification_date: '2024-07-25T07:01:25.960000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: cbacb0d0b21b880136c46ec4144b16ec
   path: 00571.tfrecord.gz

@@ -1,3 +1,13 @@
+meta:
+  checksum: ceb9250b2b55ef6382ab849fbab4de77
+  creation_date: '2024-07-25T09:28:16.270000'
+  description: TFRecord file 01417.tfrecord.gz
+  file_size: 899279
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:28:16.261000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ceb9250b2b55ef6382ab849fbab4de77
   path: 01417.tfrecord.gz

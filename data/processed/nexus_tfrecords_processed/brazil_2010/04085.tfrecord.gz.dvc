@@ -1,3 +1,13 @@
+meta:
+  checksum: 99c020dacd1853b819da198088ea034a
+  creation_date: '2024-07-25T20:50:31.125000'
+  description: TFRecord file 04085.tfrecord.gz
+  file_size: 981012
+  format: tfrecords.gz
+  modification_date: '2024-07-25T20:50:31.117000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 99c020dacd1853b819da198088ea034a
   path: 04085.tfrecord.gz

@@ -1,3 +1,13 @@
+meta:
+  checksum: e934534ed681b005086b945524601e6b
+  creation_date: '2024-07-26T04:08:09.505000'
+  description: TFRecord file 00895.tfrecord.gz
+  file_size: 716605
+  format: tfrecords.gz
+  modification_date: '2024-07-25T07:53:59.724000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: e934534ed681b005086b945524601e6b
   path: 00895.tfrecord.gz

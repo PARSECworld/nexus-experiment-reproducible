@@ -1,3 +1,13 @@
+meta:
+  checksum: 1033a2b4d168a668755be2ec96aca545
+  creation_date: '2024-07-25T10:29:24.473000'
+  description: TFRecord file 01723.tfrecord.gz
+  file_size: 812255
+  format: tfrecords.gz
+  modification_date: '2024-07-25T10:29:24.467000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 1033a2b4d168a668755be2ec96aca545
   path: 01723.tfrecord.gz

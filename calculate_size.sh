@@ -36,6 +36,6 @@ total_size_hr=$(echo "$total_size" | awk '{ split( "B KB MB GB TB", v ); s=1; wh
     done | sort -rh
 
     echo "Total size of tracked files: $total_size_hr"
-} > file_sizes.txt
+} > logs/file_sizes_log.txt
 
 echo "File sizes have been written to file_sizes.txt"

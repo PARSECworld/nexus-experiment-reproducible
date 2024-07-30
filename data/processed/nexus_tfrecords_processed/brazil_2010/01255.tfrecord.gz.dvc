@@ -1,3 +1,13 @@
+meta:
+  checksum: 5d4f1f61ec07b0580d22a938e651b297
+  creation_date: '2024-07-26T06:06:42.125000'
+  description: TFRecord file 01255.tfrecord.gz
+  file_size: 812737
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:57:45.682000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 5d4f1f61ec07b0580d22a938e651b297
   path: 01255.tfrecord.gz

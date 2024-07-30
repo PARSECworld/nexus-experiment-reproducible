@@ -1,3 +1,13 @@
+meta:
+  checksum: db6faf2015b8348e61da6447aa36a29e
+  creation_date: '2024-07-26T05:26:03.664000'
+  description: TFRecord file 01130.tfrecord.gz
+  file_size: 762726
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:35:01.459000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: db6faf2015b8348e61da6447aa36a29e
   path: 01130.tfrecord.gz

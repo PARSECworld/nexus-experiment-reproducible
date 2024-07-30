@@ -1,3 +1,13 @@
+meta:
+  checksum: c682e92d0f39d469a3e794501754684b
+  creation_date: '2024-07-25T20:31:43.222000'
+  description: TFRecord file 04027.tfrecord.gz
+  file_size: 810689
+  format: tfrecords.gz
+  modification_date: '2024-07-25T20:31:43.215000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: c682e92d0f39d469a3e794501754684b
   path: 04027.tfrecord.gz

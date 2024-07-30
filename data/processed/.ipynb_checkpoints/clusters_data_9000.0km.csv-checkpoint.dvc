@@ -1,0 +1,19 @@
+meta:
+  checksum: b4af71aef777e64cc85c7ea2382b5a03
+  column_names:
+  - country
+  - year
+  - lat
+  - lon
+  - income
+  - literacy
+  - longevity
+  creation_date: '2024-07-26T18:08:34.527000'
+  description: CSV file clusters_data_9000.0km.csv
+  file_size: 2530374
+  format: csv
+  number_of_columns: 7
+  number_of_records: 23719
+outs:
+- md5: b4af71aef777e64cc85c7ea2382b5a03
+  path: clusters_data_9000.0km.csv

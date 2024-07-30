@@ -1,3 +1,13 @@
+meta:
+  checksum: 84003a9c14c01230d7bbb4b9a7c02b2d
+  creation_date: '2024-07-25T21:47:31.461000'
+  description: TFRecord file 04258.tfrecord.gz
+  file_size: 745155
+  format: tfrecords.gz
+  modification_date: '2024-07-25T21:47:31.453000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 84003a9c14c01230d7bbb4b9a7c02b2d
   path: 04258.tfrecord.gz

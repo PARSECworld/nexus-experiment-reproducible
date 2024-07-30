@@ -1,3 +1,13 @@
+meta:
+  checksum: fbab613549c311faf81550c827b37a9d
+  creation_date: '2024-07-25T15:39:48.822000'
+  description: TFRecord file 03029.tfrecord.gz
+  file_size: 823455
+  format: tfrecords.gz
+  modification_date: '2024-07-25T15:39:48.814000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: fbab613549c311faf81550c827b37a9d
   path: 03029.tfrecord.gz

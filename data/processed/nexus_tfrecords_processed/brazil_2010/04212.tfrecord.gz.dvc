@@ -1,3 +1,13 @@
+meta:
+  checksum: bed6455c9b85b95716676f7ad6337d51
+  creation_date: '2024-07-25T21:32:25.604000'
+  description: TFRecord file 04212.tfrecord.gz
+  file_size: 758129
+  format: tfrecords.gz
+  modification_date: '2024-07-25T21:32:25.597000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: bed6455c9b85b95716676f7ad6337d51
   path: 04212.tfrecord.gz
