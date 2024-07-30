@@ -1,3 +1,13 @@
+meta:
+  checksum: 6cab709782751baec7654ef7fdcd122c
+  creation_date: '2024-07-25T12:00:20.785000'
+  description: TFRecord file 02143.tfrecord.gz
+  file_size: 801292
+  format: tfrecords.gz
+  modification_date: '2024-07-25T12:00:20.778000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 6cab709782751baec7654ef7fdcd122c
   path: 02143.tfrecord.gz

@@ -1,3 +1,13 @@
+meta:
+  checksum: b746ce97cd72aa18746e4b2413818552
+  creation_date: '2024-07-25T16:01:12.131000'
+  description: TFRecord file 03108.tfrecord.gz
+  file_size: 887112
+  format: tfrecords.gz
+  modification_date: '2024-07-25T16:01:12.124000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: b746ce97cd72aa18746e4b2413818552
   path: 03108.tfrecord.gz

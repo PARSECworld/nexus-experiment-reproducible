@@ -1,12 +1,21 @@
 #!/bin/bash
 
-# Remover o arquivo de log anterior
-rm -f output.log nohup.out
+# Extrai o nome base do script (sem extensão)
+script_name=$(basename "$0")
+script_base_name="${script_name%.*}"
+log_dir="/home/sagemaker-user/reproducible/logs"
+process_log_file="${log_dir}/process_log_${script_base_name}.txt"
+
+# Cria o diretório de logs, se não existir
+mkdir -p "$log_dir"
+
+# Remove o arquivo de log anterior, se existir
+rm -f "$process_log_file"
 
 # Script para adicionar arquivos ao DVC e empurrá-los para o S3
 {
   echo "Início: $(date)"
-  
+
   . nexus_experiment/bin/activate
 
   # Verificar e configurar credenciais Git se necessário
@@ -74,6 +83,6 @@ rm -f output.log nohup.out
   git push
 
   echo "Término: $(date)"
-} > output.log 2>&1
+} > "$process_log_file" 2>&1
 
-echo "Fim: $(date)" >> output.log
+echo "Fim: $(date)" >> "$process_log_file"

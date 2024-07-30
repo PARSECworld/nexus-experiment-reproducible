@@ -1,3 +1,13 @@
+meta:
+  checksum: 978c22b69053a78c41019c19499c5f52
+  creation_date: '2024-07-26T05:36:28.129000'
+  description: TFRecord file 01162.tfrecord.gz
+  file_size: 866836
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:40:40.631000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 978c22b69053a78c41019c19499c5f52
   path: 01162.tfrecord.gz

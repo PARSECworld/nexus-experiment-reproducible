@@ -1,3 +1,13 @@
+meta:
+  checksum: e20e6743e58870e621582b2e590cd81b
+  creation_date: '2024-07-26T04:48:34.804000'
+  description: TFRecord file 01015.tfrecord.gz
+  file_size: 799165
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:14:46.112000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: e20e6743e58870e621582b2e590cd81b
   path: 01015.tfrecord.gz

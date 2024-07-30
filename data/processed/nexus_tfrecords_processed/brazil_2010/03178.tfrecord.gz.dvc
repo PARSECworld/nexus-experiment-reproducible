@@ -1,3 +1,13 @@
+meta:
+  checksum: eb6013ba1994e50066cf2b4f71ada3dd
+  creation_date: '2024-07-25T16:20:31.666000'
+  description: TFRecord file 03178.tfrecord.gz
+  file_size: 969992
+  format: tfrecords.gz
+  modification_date: '2024-07-25T16:20:31.659000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: eb6013ba1994e50066cf2b4f71ada3dd
   path: 03178.tfrecord.gz

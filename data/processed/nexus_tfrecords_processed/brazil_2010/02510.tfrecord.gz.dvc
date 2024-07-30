@@ -1,3 +1,13 @@
+meta:
+  checksum: ad9189204d754f18fabb64f6188e5846
+  creation_date: '2024-07-25T13:25:54.595000'
+  description: TFRecord file 02510.tfrecord.gz
+  file_size: 853599
+  format: tfrecords.gz
+  modification_date: '2024-07-25T13:25:54.587000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ad9189204d754f18fabb64f6188e5846
   path: 02510.tfrecord.gz

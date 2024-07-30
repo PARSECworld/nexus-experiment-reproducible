@@ -1,3 +1,13 @@
+meta:
+  checksum: db51a1c45d395dafd18bf272aaddb264
+  creation_date: '2024-07-25T11:30:48.150000'
+  description: TFRecord file 02010.tfrecord.gz
+  file_size: 856042
+  format: tfrecords.gz
+  modification_date: '2024-07-25T11:30:48.142000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: db51a1c45d395dafd18bf272aaddb264
   path: 02010.tfrecord.gz

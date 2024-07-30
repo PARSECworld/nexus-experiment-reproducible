@@ -1,3 +1,13 @@
+meta:
+  checksum: ab02034591927854aabd9e7d5e4584c5
+  creation_date: '2024-07-25T16:15:17.524000'
+  description: TFRecord file 03159.tfrecord.gz
+  file_size: 876508
+  format: tfrecords.gz
+  modification_date: '2024-07-25T16:15:17.513000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ab02034591927854aabd9e7d5e4584c5
   path: 03159.tfrecord.gz

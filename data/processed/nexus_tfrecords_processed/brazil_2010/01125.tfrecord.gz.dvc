@@ -1,3 +1,13 @@
+meta:
+  checksum: bd7212a654abff92c398ba73d0442596
+  creation_date: '2024-07-26T05:24:26.528000'
+  description: TFRecord file 01125.tfrecord.gz
+  file_size: 780108
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:34:07.559000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: bd7212a654abff92c398ba73d0442596
   path: 01125.tfrecord.gz

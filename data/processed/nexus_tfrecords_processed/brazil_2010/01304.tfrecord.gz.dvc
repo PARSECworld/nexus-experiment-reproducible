@@ -1,3 +1,13 @@
+meta:
+  checksum: e667d96b943e15ec371a995c61f4ca50
+  creation_date: '2024-07-26T06:22:51.810000'
+  description: TFRecord file 01304.tfrecord.gz
+  file_size: 1029842
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:06:57.758000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: e667d96b943e15ec371a995c61f4ca50
   path: 01304.tfrecord.gz

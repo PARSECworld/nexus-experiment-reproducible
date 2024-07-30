@@ -1,3 +1,13 @@
+meta:
+  checksum: df180d185b87c74a5bd36494272da601
+  creation_date: '2024-07-30T09:46:33.590000'
+  description: TFRecord file brazil_2010_81.tfrecord.gz
+  file_size: 25260440
+  format: tfrecords.gz
+  modification_date: '2024-07-25T05:36:17.715000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: df180d185b87c74a5bd36494272da601
   path: brazil_2010_81.tfrecord.gz

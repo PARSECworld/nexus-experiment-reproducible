@@ -1,3 +1,13 @@
+meta:
+  checksum: 970152864234082b1cc9be8032ce82aa
+  creation_date: '2024-07-26T04:49:51.491000'
+  description: TFRecord file 01019.tfrecord.gz
+  file_size: 856654
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:15:22.540000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 970152864234082b1cc9be8032ce82aa
   path: 01019.tfrecord.gz

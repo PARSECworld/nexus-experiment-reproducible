@@ -23,10 +23,11 @@ meta:
   - Ridge NL mean scalar
   - Ridge RGB hist
   - Ridge RGB+NL hist
-  creation_date: '2024-07-26T18:03:40.259000'
+  creation_date: '2024-07-30T04:08:17.851000'
   description: CSV file alldata.csv
   file_size: 6438285
   format: csv
+  modification_date: '2024-07-25T04:13:54.880000'
   number_of_columns: 22
   number_of_records: 30000
 outs:

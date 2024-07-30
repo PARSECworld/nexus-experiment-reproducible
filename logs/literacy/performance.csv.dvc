@@ -6,10 +6,11 @@ meta:
   - R2
   - mse
   - rank
-  creation_date: '2024-07-26T18:06:42.774000'
+  creation_date: '2024-07-30T04:12:34.865000'
   description: CSV file performance.csv
   file_size: 1089
   format: csv
+  modification_date: '2024-07-25T04:14:31.591000'
   number_of_columns: 5
   number_of_records: 11
 outs:

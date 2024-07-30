@@ -1,3 +1,13 @@
+meta:
+  checksum: bc78407fcafe8896a31fd5a3c690ea95
+  creation_date: '2024-07-25T16:00:20.562000'
+  description: TFRecord file 03105.tfrecord.gz
+  file_size: 975530
+  format: tfrecords.gz
+  modification_date: '2024-07-25T16:00:20.547000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: bc78407fcafe8896a31fd5a3c690ea95
   path: 03105.tfrecord.gz

@@ -1,3 +1,13 @@
+meta:
+  checksum: 02310e6b7ccfc2c60cc64d3e8cafe436
+  creation_date: '2024-07-26T19:52:45.481000'
+  description: TFRecord file 00319.tfrecord.gz
+  file_size: 640475
+  format: tfrecords.gz
+  modification_date: '2024-07-25T06:24:01.582000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 02310e6b7ccfc2c60cc64d3e8cafe436
   path: 00319.tfrecord.gz

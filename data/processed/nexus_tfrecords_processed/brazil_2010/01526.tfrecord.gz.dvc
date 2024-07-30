@@ -1,3 +1,13 @@
+meta:
+  checksum: a6928a3f1ed926532460650b1e413249
+  creation_date: '2024-07-25T09:49:15.985000'
+  description: TFRecord file 01526.tfrecord.gz
+  file_size: 942866
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:49:15.978000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: a6928a3f1ed926532460650b1e413249
   path: 01526.tfrecord.gz

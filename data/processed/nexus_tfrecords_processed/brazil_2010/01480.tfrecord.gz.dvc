@@ -1,3 +1,13 @@
+meta:
+  checksum: acc0191030679457731fa60f6801e1b6
+  creation_date: '2024-07-25T09:40:21.347000'
+  description: TFRecord file 01480.tfrecord.gz
+  file_size: 842509
+  format: tfrecords.gz
+  modification_date: '2024-07-25T09:40:21.339000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: acc0191030679457731fa60f6801e1b6
   path: 01480.tfrecord.gz

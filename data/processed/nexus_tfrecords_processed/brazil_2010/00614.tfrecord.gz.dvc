@@ -1,3 +1,13 @@
+meta:
+  checksum: 768fedf2005da001f0e1fec25f0b7255
+  creation_date: '2024-07-26T02:41:21.903000'
+  description: TFRecord file 00614.tfrecord.gz
+  file_size: 1040140
+  format: tfrecords.gz
+  modification_date: '2024-07-25T07:08:23.330000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 768fedf2005da001f0e1fec25f0b7255
   path: 00614.tfrecord.gz

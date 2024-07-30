@@ -1,3 +1,13 @@
+meta:
+  checksum: bb6a313546478c886968722acee68bdc
+  creation_date: '2024-07-25T11:29:58.704000'
+  description: TFRecord file 02006.tfrecord.gz
+  file_size: 762729
+  format: tfrecords.gz
+  modification_date: '2024-07-25T11:29:58.697000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: bb6a313546478c886968722acee68bdc
   path: 02006.tfrecord.gz

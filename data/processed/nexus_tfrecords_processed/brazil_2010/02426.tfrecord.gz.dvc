@@ -1,3 +1,13 @@
+meta:
+  checksum: aadf26896d08055b3a486bdb6297795b
+  creation_date: '2024-07-25T13:05:54.790000'
+  description: TFRecord file 02426.tfrecord.gz
+  file_size: 743406
+  format: tfrecords.gz
+  modification_date: '2024-07-25T13:05:54.782000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: aadf26896d08055b3a486bdb6297795b
   path: 02426.tfrecord.gz

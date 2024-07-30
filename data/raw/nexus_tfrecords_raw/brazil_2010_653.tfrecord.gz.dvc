@@ -1,3 +1,13 @@
+meta:
+  checksum: e52087ce707d05b9d79859ee20bc237e
+  creation_date: '2024-07-30T08:43:39.457000'
+  description: TFRecord file brazil_2010_653.tfrecord.gz
+  file_size: 25236553
+  format: tfrecords.gz
+  modification_date: '2024-07-25T05:20:44.250000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: e52087ce707d05b9d79859ee20bc237e
   path: brazil_2010_653.tfrecord.gz

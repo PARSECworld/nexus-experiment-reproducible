@@ -1,3 +1,13 @@
+meta:
+  checksum: 728c264f4c690f0d875904ca6760b4dd
+  creation_date: '2024-07-26T05:41:38.652000'
+  description: TFRecord file 01178.tfrecord.gz
+  file_size: 878394
+  format: tfrecords.gz
+  modification_date: '2024-07-25T08:43:37.630000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 728c264f4c690f0d875904ca6760b4dd
   path: 01178.tfrecord.gz

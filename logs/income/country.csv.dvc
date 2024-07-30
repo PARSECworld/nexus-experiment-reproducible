@@ -7,10 +7,11 @@ meta:
   - R2
   - mse
   - rank
-  creation_date: '2024-07-26T18:04:09.346000'
+  creation_date: '2024-07-30T04:09:01.900000'
   description: CSV file country.csv
   file_size: 1483
   format: csv
+  modification_date: '2024-07-25T04:13:57.590000'
   number_of_columns: 6
   number_of_records: 15
 outs:

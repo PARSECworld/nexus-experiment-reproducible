@@ -1,3 +1,13 @@
+meta:
+  checksum: ca0c12d709f238c191cab5d2873b8b17
+  creation_date: '2024-07-25T15:56:37.618000'
+  description: TFRecord file 03091.tfrecord.gz
+  file_size: 1021109
+  format: tfrecords.gz
+  modification_date: '2024-07-25T15:56:37.611000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ca0c12d709f238c191cab5d2873b8b17
   path: 03091.tfrecord.gz

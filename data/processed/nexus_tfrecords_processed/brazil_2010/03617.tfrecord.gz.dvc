@@ -1,3 +1,13 @@
+meta:
+  checksum: fee38938cec1cc79c3001813aaec8646
+  creation_date: '2024-07-25T18:26:13.911000'
+  description: TFRecord file 03617.tfrecord.gz
+  file_size: 903683
+  format: tfrecords.gz
+  modification_date: '2024-07-25T18:26:13.904000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: fee38938cec1cc79c3001813aaec8646
   path: 03617.tfrecord.gz

@@ -1,3 +1,13 @@
+meta:
+  checksum: fafcdaa8e2895f9af714905524104b95
+  creation_date: '2024-07-25T11:42:39.065000'
+  description: TFRecord file 02064.tfrecord.gz
+  file_size: 862927
+  format: tfrecords.gz
+  modification_date: '2024-07-25T11:42:39.058000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: fafcdaa8e2895f9af714905524104b95
   path: 02064.tfrecord.gz

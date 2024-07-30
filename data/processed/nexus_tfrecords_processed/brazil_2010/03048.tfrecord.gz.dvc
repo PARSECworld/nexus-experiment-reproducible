@@ -1,3 +1,13 @@
+meta:
+  checksum: ff60c4ea81b518e21f756264ebeca215
+  creation_date: '2024-07-25T15:44:55.963000'
+  description: TFRecord file 03048.tfrecord.gz
+  file_size: 884471
+  format: tfrecords.gz
+  modification_date: '2024-07-25T15:44:55.955000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ff60c4ea81b518e21f756264ebeca215
   path: 03048.tfrecord.gz

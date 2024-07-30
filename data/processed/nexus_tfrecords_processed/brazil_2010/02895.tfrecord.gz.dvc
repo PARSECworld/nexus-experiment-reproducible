@@ -1,3 +1,13 @@
+meta:
+  checksum: ead753ae673b7442514e1b867ae875aa
+  creation_date: '2024-07-25T15:03:54.618000'
+  description: TFRecord file 02895.tfrecord.gz
+  file_size: 983761
+  format: tfrecords.gz
+  modification_date: '2024-07-25T15:03:54.611000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: ead753ae673b7442514e1b867ae875aa
   path: 02895.tfrecord.gz

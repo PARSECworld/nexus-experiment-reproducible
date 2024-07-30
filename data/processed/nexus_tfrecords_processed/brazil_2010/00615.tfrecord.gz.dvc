@@ -1,3 +1,13 @@
+meta:
+  checksum: 21cb43081538b6819fc4ab34ad10d317
+  creation_date: '2024-07-26T02:41:38.229000'
+  description: TFRecord file 00615.tfrecord.gz
+  file_size: 1016686
+  format: tfrecords.gz
+  modification_date: '2024-07-25T07:08:31.439000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: 21cb43081538b6819fc4ab34ad10d317
   path: 00615.tfrecord.gz

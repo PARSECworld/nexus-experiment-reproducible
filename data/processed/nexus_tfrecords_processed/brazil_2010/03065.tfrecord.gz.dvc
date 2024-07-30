@@ -1,3 +1,13 @@
+meta:
+  checksum: a77e350009e7c6c1945eebec0970c040
+  creation_date: '2024-07-25T15:49:30.342000'
+  description: TFRecord file 03065.tfrecord.gz
+  file_size: 780390
+  format: tfrecords.gz
+  modification_date: '2024-07-25T15:49:30.333000'
+  number_of_features: 0
+  number_of_records: 0
+  schema: {}
 outs:
 - md5: a77e350009e7c6c1945eebec0970c040
   path: 03065.tfrecord.gz
