@@ -6,6 +6,8 @@ python -m ipykernel install --user --name nexus_experiment --display-name "Nexus
 apt install git
 
 apt-get install nano
+apt-get install mysql-client -y
+
 # Verificar e configurar credenciais Git se necessário
 git remote set-url origin https://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@github.com/PARSECworld/nexus-reproducible.git
 

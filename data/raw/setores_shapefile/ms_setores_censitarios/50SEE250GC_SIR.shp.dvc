@@ -5,7 +5,7 @@ meta:
   - -50.9229090804468
   - -17.166348555893798
   checksum: fcef18319359c70d19888ddff0b7446e
-  creation_date: '2024-07-30T10:20:22.060000'
+  creation_date: '2024-07-31T08:08:14.461000'
   crs:
     init: epsg:4674
   description: Shapefile 50SEE250GC_SIR.shp
