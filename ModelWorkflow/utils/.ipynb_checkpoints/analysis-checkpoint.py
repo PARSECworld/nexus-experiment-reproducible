@@ -6,6 +6,21 @@ import sklearn.metrics
 
 
 def calc_score(labels, preds, metric, weights=None):
+    labels = np.array(labels)
+    preds = np.array(preds)
+
+    # Identificar índices com valores NaN
+    labels_nan = np.isnan(labels)
+    preds_nan = np.isnan(preds)
+    total_nans = np.sum(labels_nan | preds_nan)
+
+    if total_nans > 0:
+        print(f"Aviso: Existem {total_nans} valores NaN em labels ou preds.")
+
+    # Filtrar valores válidos
+    valid_indices = ~labels_nan & ~preds_nan
+    labels = labels[valid_indices]
+    preds = preds[valid_indices]
     '''
     See https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#Weighted_correlation_coefficient
     for the weighted correlation coefficient formula.

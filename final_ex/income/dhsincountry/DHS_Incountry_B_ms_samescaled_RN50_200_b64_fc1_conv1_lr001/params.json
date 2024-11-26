@@ -1,8 +1,8 @@
 {
     "experiment_name": "DHS_Incountry_B_ms_samescaled_RN50_200",
-    "out_dir": "/root/final_ex/income/dhsincountry/",
+    "out_dir": "/home/sagemaker-user/reproducible/final_ex/income/dhsincountry/",
     "init_ckpt_dir": null,
-    "imagenet_weights_path": "/root/resnet/ImageNet-ResNet50.npz",
+    "imagenet_weights_path": "/home/sagemaker-user/reproducible/resnet/ImageNet-ResNet50.npz",
     "hs_weight_init": "samescaled",
     "exclude_final_layer": false,
     "label_name": "income",
@@ -26,7 +26,7 @@
         "train_eval",
         "val"
     ],
-    "max_epochs": 200,
+    "max_epochs": 2,
     "eval_every": 1,
     "print_every": 40,
     "seed": 123

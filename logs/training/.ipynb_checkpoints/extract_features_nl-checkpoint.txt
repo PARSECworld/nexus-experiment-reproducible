@@ -1,0 +1,10 @@
+/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/google/auth/crypt/_cryptography_rsa.py:22: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+  import cryptography.exceptions
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_model.py:70: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:67: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+Traceback (most recent call last):
+  File "extract_features_nl.py", line 31, in <module>
+    'DHS_Incountry_E_nl_random_b64_fc1_conv1.0_lr001',
+TypeError: 'type' object is not subscriptable

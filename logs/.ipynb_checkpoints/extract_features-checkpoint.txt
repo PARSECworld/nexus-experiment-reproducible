@@ -1,0 +1,71 @@
+/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/google/auth/crypt/_cryptography_rsa.py:22: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+  import cryptography.exceptions
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_model.py:70: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:67: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From extract_features.py:64: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2024-08-27 22:44:54.309897: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2024-08-27 22:44:54.309933: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (-1)
+2024-08-27 22:44:54.309958: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (1-15-5-gpu-py3-jupyt-ml-t3-2xlarge-49519f30214d10a8b262ebf6f87e): /proc/driver/nvidia/version does not exist
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/batchers/batcher.py:204: DatasetV1.make_initializable_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_initializable_iterator(dataset)`.
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:63: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_config.py:26: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/tensorflow_core/python/util/deprecation.py:507: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with distribution=normal is deprecated and will be removed in a future version.
+Instructions for updating:
+`normal` is a deprecated alias for `truncated_normal`
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:269: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:270: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:238: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/tensorflow_core/python/layers/normalization.py:327: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:344: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:254: The name tf.nn.xw_plus_b is deprecated. Please use tf.compat.v1.nn.xw_plus_b instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:261: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:262: The name tf.local_variables_initializer is deprecated. Please use tf.compat.v1.local_variables_initializer instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:265: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2024-08-27 22:44:55.273421: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2024-08-27 22:44:55.280615: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499995000 Hz
+2024-08-27 22:44:55.281140: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4d908a0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-08-27 22:44:55.281165: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+File exists. Removing: /home/sagemaker-user/reproducible/final_ex/dhsincountry/DHS_Incountry_A_nl_random_b64_fc1.0_conv1.0_lr0001/features.npz
+File exists. Removing: /home/sagemaker-user/reproducible/final_ex/dhsincountry/DHS_Incountry_B_nl_random_b64_fc1.0_conv1.0_lr0001/features.npz
+File exists. Removing: /home/sagemaker-user/reproducible/final_ex/dhsincountry/DHS_Incountry_C_nl_random_b64_fc1.0_conv1.0_lr0001/features.npz
+File exists. Removing: /home/sagemaker-user/reproducible/final_ex/dhsincountry/DHS_Incountry_D_nl_random_b64_fc1.0_conv1.0_lr0001/features.npz
+File exists. Removing: /home/sagemaker-user/reproducible/final_ex/dhsincountry/DHS_Incountry_E_nl_random_b64_fc1_conv1.0_lr001/features.npz
+====== Current Config: ======
+- dataset: dhs
+- ls_bands: None
+- nl_band: split
+- model_arch: resnet
+- number of models: 5
+
+Building model...
+Creating session...
+Loading saved ckpt...
+Reading from checkpoint dir: /home/sagemaker-user/reproducible/final_ex/dhsincountry/DHS_Incountry_A_nl_random_b64_fc1.0_conv1.0_lr0001
+Loading checkpoint: ckpt-1
+  0%|          | 0/185 [00:00<?, ?it/s]  1%|          | 1/185 [00:11<33:48, 11.02s/it]  1%|          | 2/185 [00:17<25:37,  8.40s/it]  2%|▏         | 3/185 [00:24<22:48,  7.52s/it]  2%|▏         | 4/185 [00:30<21:42,  7.20s/it]  3%|▎         | 5/185 [00:37<21:10,  7.06s/it]  3%|▎         | 6/185 [00:44<20:41,  6.94s/it]  4%|▍         | 7/185 [00:50<20:10,  6.80s/it]  4%|▍         | 8/185 [00:57<19:48,  6.72s/it]  5%|▍         | 9/185 [01:03<19:29,  6.64s/it]  5%|▌         | 10/185 [01:10<18:57,  6.50s/it]  6%|▌         | 11/185 [01:16<18:44,  6.46s/it]  6%|▋         | 12/185 [01:22<18:33,  6.43s/it]  7%|▋         | 13/185 [01:29<18:18,  6.39s/it]  8%|▊         | 14/185 [01:35<18:21,  6.44s/it]  8%|▊         | 15/185 [01:42<18:15,  6.45s/it]  9%|▊         | 16/185 [01:47<17:30,  6.22s/it]  9%|▉         | 17/185 [01:53<17:01,  6.08s/it] 10%|▉         | 18/185 [01:59<16:26,  5.91s/it] 10%|█         | 19/185 [02:04<16:23,  5.93s/it] 11%|█         | 20/185 [02:10<16:08,  5.87s/it] 11%|█▏        | 21/185 [02:16<15:59,  5.85s/it] 12%|█▏        | 22/185 [02:22<15:46,  5.81s/it] 12%|█▏        | 23/185 [02:27<15:22,  5.69s/it] 13%|█▎        | 24/185 [02:33<15:12,  5.67s/it] 14%|█▎        | 25/185 [02:38<15:01,  5.63s/it] 14%|█▍        | 26/185 [02:44<14:58,  5.65s/it] 15%|█▍        | 27/185 [02:49<14:44,  5.60s/it] 15%|█▌        | 28/185 [02:55<14:26,  5.52s/it] 16%|█▌        | 29/185 [03:00<14:27,  5.56s/it] 16%|█▌        | 30/185 [03:06<14:17,  5.53s/it] 17%|█▋        | 31/185 [03:12<14:18,  5.57s/it] 17%|█▋        | 32/185 [03:17<14:12,  5.57s/it] 18%|█▊        | 33/185 [03:23<13:58,  5.52s/it] 18%|█▊        | 34/185 [03:28<13:53,  5.52s/it] 19%|█▉        | 35/185 [03:34<13:45,  5.50s/it] 19%|█▉        | 36/185 [03:39<13:52,  5.59s/it] 20%|██        | 37/185 [03:45<13:49,  5.61s/it] 21%|██        | 38/185 [03:51<13:42,  5.60s/it] 21%|██        | 39/185 [03:56<13:40,  5.62s/it] 22%|██▏       | 40/185 [04:02<13:21,  5.53s/it] 22%|██▏       | 41/185 [04:07<13:14,  5.52s/it] 23%|██▎       | 42/185 [04:13<13:15,  5.57s/it] 23%|██▎       | 43/185 [04:18<13:02,  5.51s/it] 24%|██▍       | 44/185 [04:23<12:49,  5.46s/it] 24%|██▍       | 45/185 [04:29<12:49,  5.49s/it] 25%|██▍       | 46/185 [04:35<12:43,  5.49s/it] 25%|██▌       | 47/185 [04:40<12:38,  5.50s/it] 26%|██▌       | 48/185 [04:45<12:28,  5.47s/it] 26%|██▋       | 49/185 [04:51<12:28,  5.51s/it] 27%|██▋       | 50/185 [04:56<12:15,  5.45s/it] 28%|██▊       | 51/185 [05:02<12:09,  5.44s/it] 28%|██▊       | 52/185 [05:08<12:24,  5.60s/it] 29%|██▊       | 53/185 [05:13<12:18,  5.60s/it] 29%|██▉       | 54/185 [05:19<12:14,  5.61s/it] 30%|██▉       | 55/185 [05:24<12:05,  5.58s/it] 30%|███       | 56/185 [05:30<12:01,  5.59s/it] 31%|███       | 57/185 [05:36<11:55,  5.59s/it] 31%|███▏      | 58/185 [05:41<11:49,  5.59s/it] 32%|███▏      | 59/185 [05:47<11:39,  5.55s/it] 32%|███▏      | 60/185 [05:52<11:26,  5.49s/it] 33%|███▎      | 61/185 [05:58<11:24,  5.52s/it] 34%|███▎      | 62/185 [06:03<11:17,  5.51s/it] 34%|███▍      | 63/185 [06:09<11:12,  5.51s/it] 35%|███▍      | 64/185 [06:14<11:15,  5.58s/it] 35%|███▌      | 65/185 [06:20<11:02,  5.52s/it] 36%|███▌      | 66/185 [06:25<11:03,  5.58s/it] 36%|███▌      | 67/185 [06:31<11:02,  5.61s/it] 37%|███▋      | 68/185 [06:37<10:55,  5.60s/it] 37%|███▋      | 69/185 [06:42<10:51,  5.62s/it] 38%|███▊      | 70/185 [06:48<10:40,  5.57s/it] 38%|███▊      | 71/185 [06:54<10:39,  5.61s/it] 39%|███▉      | 72/185 [06:59<10:33,  5.61s/it] 39%|███▉      | 73/185 [07:05<10:25,  5.59s/it] 40%|████      | 74/185 [07:10<10:25,  5.64s/it] 41%|████      | 75/185 [07:16<10:10,  5.55s/it] 41%|████      | 76/185 [07:22<10:09,  5.59s/it] 42%|████▏     | 77/185 [07:27<10:04,  5.60s/it] 42%|████▏     | 78/185 [07:33<09:55,  5.57s/it] 43%|████▎     | 79/185 [07:38<09:55,  5.62s/it] 43%|████▎     | 80/185 [07:44<09:42,  5.55s/it] 44%|████▍     | 81/185 [07:49<09:36,  5.54s/it] 44%|████▍     | 82/185 [07:55<09:38,  5.61s/it] 45%|████▍     | 83/185 [08:01<09:28,  5.57s/it] 45%|████▌     | 84/185 [08:06<09:26,  5.61s/it] 46%|████▌     | 85/185 [08:12<09:17,  5.58s/it] 46%|████▋     | 86/185 [08:17<09:13,  5.59s/it] 47%|████▋     | 87/185 [08:23<09:11,  5.63s/it] 48%|████▊     | 88/185 [08:29<09:02,  5.59s/it] 48%|████▊     | 89/185 [08:34<08:57,  5.60s/it] 49%|████▊     | 90/185 [08:40<08:48,  5.57s/it] 49%|████▉     | 91/185 [08:45<08:45,  5.60s/it] 50%|████▉     | 92/185 [08:51<08:40,  5.60s/it] 50%|█████     | 93/185 [08:56<08:32,  5.57s/it] 51%|█████     | 94/185 [09:02<08:27,  5.57s/it] 51%|█████▏    | 95/185 [09:08<08:21,  5.57s/it] 52%|█████▏    | 96/185 [09:13<08:19,  5.61s/it] 52%|█████▏    | 97/185 [09:19<08:18,  5.66s/it] 53%|█████▎    | 98/185 [09:24<08:05,  5.58s/it] 54%|█████▎    | 99/185 [09:30<08:04,  5.63s/it]

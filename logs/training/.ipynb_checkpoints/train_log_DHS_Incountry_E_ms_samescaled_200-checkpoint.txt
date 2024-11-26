@@ -1,0 +1,192 @@
+/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/google/auth/crypt/_cryptography_rsa.py:22: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+  import cryptography.exceptions
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_model.py:70: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:67: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2024-09-24 19:47:02.535691: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2024-09-24 19:47:02.563753: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2799995000 Hz
+2024-09-24 19:47:02.565530: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3d673c0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-09-24 19:47:02.565552: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2024-09-24 19:47:02.567486: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2024-09-24 19:47:04.819789: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:04.821688: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x527ee00 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-09-24 19:47:04.821718: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA A10G, Compute Capability 8.6
+2024-09-24 19:47:04.821950: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:04.823582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: NVIDIA A10G major: 8 minor: 6 memoryClockRate(GHz): 1.71
+pciBusID: 0000:00:1e.0
+2024-09-24 19:47:04.823802: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-09-24 19:47:04.825018: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-09-24 19:47:04.826091: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-09-24 19:47:04.826346: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-09-24 19:47:04.827769: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-09-24 19:47:04.828817: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-09-24 19:47:04.832129: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-09-24 19:47:04.832266: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:04.833950: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:04.835436: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2024-09-24 19:47:04.835469: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-09-24 19:47:04.837702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2024-09-24 19:47:04.837714: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 
+2024-09-24 19:47:04.837721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N 
+2024-09-24 19:47:04.837837: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:04.839565: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:04.841451: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21146 MB memory) -> physical GPU (device: 0, name: NVIDIA A10G, pci bus id: 0000:00:1e.0, compute capability: 8.6)
+train_direct.py:48: FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+  import mlflow
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/tensorflow_core/python/data/util/random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2024-09-24 19:47:10.620213: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:10.622081: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: NVIDIA A10G major: 8 minor: 6 memoryClockRate(GHz): 1.71
+pciBusID: 0000:00:1e.0
+2024-09-24 19:47:10.622129: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-09-24 19:47:10.622144: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-09-24 19:47:10.622156: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-09-24 19:47:10.622169: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-09-24 19:47:10.622181: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-09-24 19:47:10.622193: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-09-24 19:47:10.622206: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-09-24 19:47:10.622273: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:10.623974: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-09-24 19:47:10.625454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+/home/sagemaker-user/reproducible/ModelWorkflow/batchers/batcher.py:194: UserWarning: Seed 123 from outer graph might be getting used by function Dataset_map_Batcher.augment_example, if the random op has not been provided any seed. Explicitly set the seed in the function if this is not the intended behavior.
+  dataset = dataset.map(self.augment_example)
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/batchers/batcher.py:204: DatasetV1.make_initializable_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_initializable_iterator(dataset)`.
+Current time: 1727207221.7306993
+Outputs directory: /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/DHS_Incountry_E_ms_samescaled_200_b64_fc001_conv001_lr0001
+Started MLflow run for experiment: DHS_Incountry_E_ms_samescaled_200
+num_train: 14200
+num_val: 4742
+Building model...
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:63: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_config.py:26: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/tensorflow_core/python/util/deprecation.py:507: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with distribution=normal is deprecated and will be removed in a future version.
+Instructions for updating:
+`normal` is a deprecated alias for `truncated_normal`
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:269: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:270: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:238: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/tensorflow_core/python/layers/normalization.py:327: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:344: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/hyperspectral_resnet.py:254: The name tf.nn.xw_plus_b is deprecated. Please use tf.compat.v1.nn.xw_plus_b instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/loss_utils.py:20: The name tf.losses.mean_squared_error is deprecated. Please use tf.compat.v1.losses.mean_squared_error instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/loss_utils.py:24: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/loss_utils.py:76: The name tf.losses.get_total_loss is deprecated. Please use tf.compat.v1.losses.get_total_loss instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/loss_utils.py:77: The name tf.losses.get_regularization_loss is deprecated. Please use tf.compat.v1.losses.get_regularization_loss instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/loss_utils.py:81: The name tf.summary.merge is deprecated. Please use tf.compat.v1.summary.merge instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/loss_utils.py:82: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py:101: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py:102: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py:105: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_model.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py:138: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py:150: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/init_from_pretrained.py:149: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+First layer weights: <tf.Variable 'resnet/scale1/weights:0' shape=(7, 7, 7, 64) dtype=float32_ref>
+Initializing variables...
+Initializing variables from pre-trained ImageNet weights.
+Initializing var different from saved rgb weights: resnet/scale1/weights:0  With shape: [ 7  7  7 64]
+Using samescaled initialization for hyperspectral weights.
+Shape of 1st layer weights: (7, 7, 7, 64)
+Did not find saved value for variable: resnet/scale2/block2/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale2/block2/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale3/block1/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale3/block1/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale3/block2/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale3/block2/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale4/block1/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale4/block1/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale4/block2/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale4/block2/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale5/block1/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale5/block1/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale5/block2/preact/batch_normalization/gamma:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/scale5/block2/preact/batch_normalization/beta:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/fc/weights:0
+Will use default initalization instead.
+Did not find saved value for variable: resnet/fc/biases:0
+Will use default initalization instead.
+Evaluating model on train_eval set...
+  0%|          | 0/222 [00:00<?, ?it/s]2024-09-24 19:50:08.502783: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-09-24 19:51:51.425885: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-09-24 19:57:37.557574: W tensorflow/stream_executor/cuda/redzone_allocator.cc:312] Internal: ptxas exited with non-zero error code 65280, output: ptxas fatal   : Value 'sm_86' is not defined for option 'gpu-name'
+
+Relying on driver to perform ptx compilation. This message will be only logged once.
+  0%|          | 1/222 [07:55<29:11:27, 475.51s/it]  2%|▏         | 4/222 [07:55<5:27:04, 90.02s/it]    3%|▎         | 6/222 [07:57<3:03:52, 51.08s/it]  3%|▎         | 7/222 [07:58<2:20:41, 39.26s/it]  4%|▎         | 8/222 [07:59<1:45:46, 29.65s/it]  4%|▍         | 9/222 [08:01<1:18:47, 22.19s/it]  5%|▍         | 10/222 [08:02<58:08, 16.46s/it]   5%|▍         | 11/222 [08:03<42:50, 12.18s/it]  5%|▌         | 12/222 [08:05<31:41,  9.05s/it]  6%|▌         | 13/222 [08:06<23:58,  6.88s/it]  6%|▋         | 14/222 [08:08<18:13,  5.26s/it]  7%|▋         | 15/222 [08:09<14:06,  4.09s/it]  7%|▋         | 16/222 [08:10<11:12,  3.27s/it]  8%|▊         | 17/222 [08:12<09:28,  2.77s/it]  8%|▊         | 18/222 [08:13<07:56,  2.34s/it]  9%|▊         | 19/222 [08:15<06:59,  2.06s/it]  9%|▉         | 20/222 [08:16<06:11,  1.84s/it]  9%|▉         | 21/222 [08:17<05:55,  1.77s/it] 10%|▉         | 22/222 [08:19<05:26,  1.63s/it] 10%|█         | 23/222 [08:20<05:06,  1.54s/it] 11%|█         | 24/222 [08:22<05:10,  1.57s/it] 11%|█▏        | 25/222 [08:23<04:54,  1.49s/it] 12%|█▏        | 26/222 [08:24<04:40,  1.43s/it] 12%|█▏        | 27/222 [08:26<04:32,  1.40s/it] 13%|█▎        | 28/222 [08:27<04:45,  1.47s/it] 13%|█▎        | 29/222 [08:29<04:39,  1.45s/it] 14%|█▎        | 30/222 [08:30<04:30,  1.41s/it] 14%|█▍        | 31/222 [08:31<04:22,  1.37s/it] 14%|█▍        | 32/222 [08:33<04:35,  1.45s/it] 15%|█▍        | 33/222 [08:34<04:28,  1.42s/it] 15%|█▌        | 34/222 [08:36<04:21,  1.39s/it] 16%|█▌        | 35/222 [08:37<04:17,  1.38s/it] 16%|█▌        | 36/222 [08:39<04:27,  1.44s/it] 17%|█▋        | 37/222 [08:40<04:18,  1.40s/it] 17%|█▋        | 38/222 [08:41<04:13,  1.38s/it] 18%|█▊        | 39/222 [08:43<04:29,  1.47s/it] 18%|█▊        | 40/222 [08:44<04:19,  1.43s/it] 18%|█▊        | 41/222 [08:45<04:11,  1.39s/it] 19%|█▉        | 42/222 [08:47<04:05,  1.36s/it] 19%|█▉        | 43/222 [08:48<04:18,  1.44s/it] 20%|█▉        | 44/222 [08:50<04:12,  1.42s/it] 20%|██        | 45/222 [08:51<04:06,  1.39s/it] 21%|██        | 46/222 [08:52<04:00,  1.37s/it] 21%|██        | 47/222 [08:54<04:13,  1.45s/it] 22%|██▏       | 48/222 [08:55<04:04,  1.40s/it] 22%|██▏       | 49/222 [08:57<03:58,  1.38s/it] 23%|██▎       | 50/222 [08:58<03:53,  1.36s/it] 23%|██▎       | 51/222 [09:00<04:05,  1.44s/it] 23%|██▎       | 52/222 [09:01<03:57,  1.40s/it] 24%|██▍       | 53/222 [09:02<03:51,  1.37s/it] 24%|██▍       | 54/222 [09:04<04:03,  1.45s/it] 25%|██▍       | 55/222 [09:05<03:54,  1.40s/it] 25%|██▌       | 56/222 [09:06<03:48,  1.38s/it] 26%|██▌       | 57/222 [09:08<03:44,  1.36s/it] 26%|██▌       | 58/222 [09:09<03:53,  1.42s/it] 27%|██▋       | 59/222 [09:11<03:53,  1.43s/it] 27%|██▋       | 60/222 [09:12<03:47,  1.40s/it] 27%|██▋       | 61/222 [09:13<03:41,  1.38s/it] 28%|██▊       | 62/222 [09:15<03:52,  1.45s/it] 28%|██▊       | 63/222 [09:16<03:47,  1.43s/it] 29%|██▉       | 64/222 [09:18<03:40,  1.40s/it] 29%|██▉       | 65/222 [09:19<03:34,  1.37s/it] 30%|██▉       | 66/222 [09:21<03:45,  1.45s/it] 30%|███       | 67/222 [09:22<03:38,  1.41s/it] 31%|███       | 68/222 [09:23<03:31,  1.37s/it] 31%|███       | 69/222 [09:25<03:41,  1.45s/it] 32%|███▏      | 70/222 [09:26<03:34,  1.41s/it] 32%|███▏      | 71/222 [09:28<03:28,  1.38s/it] 32%|███▏      | 72/222 [09:29<03:25,  1.37s/it] 33%|███▎      | 73/222 [09:31<03:35,  1.44s/it] 33%|███▎      | 74/222 [09:32<03:27,  1.40s/it] 34%|███▍      | 75/222 [09:33<03:20,  1.37s/it] 34%|███▍      | 76/222 [09:34<03:16,  1.34s/it] 35%|███▍      | 77/222 [09:36<03:26,  1.43s/it] 35%|███▌      | 78/222 [09:37<03:19,  1.39s/it] 36%|███▌      | 79/222 [09:39<03:15,  1.37s/it] 36%|███▌      | 80/222 [09:40<03:10,  1.34s/it] 36%|███▋      | 81/222 [09:42<03:22,  1.43s/it] 37%|███▋      | 82/222 [09:43<03:13,  1.38s/it] 37%|███▋      | 83/222 [09:44<03:09,  1.36s/it] 38%|███▊      | 84/222 [09:46<03:17,  1.43s/it] 38%|███▊      | 85/222 [09:47<03:10,  1.39s/it] 39%|███▊      | 86/222 [09:48<03:05,  1.36s/it] 39%|███▉      | 87/222 [09:50<03:03,  1.36s/it] 40%|███▉      | 88/222 [09:51<03:10,  1.42s/it] 40%|████      | 89/222 [09:53<03:04,  1.39s/it] 41%|████      | 90/222 [09:54<02:59,  1.36s/it] 41%|████      | 91/222 [09:55<02:56,  1.35s/it] 41%|████▏     | 92/222 [09:57<03:06,  1.44s/it] 42%|████▏     | 93/222 [09:58<02:58,  1.39s/it] 42%|████▏     | 94/222 [09:59<02:54,  1.36s/it] 43%|████▎     | 95/222 [10:01<02:50,  1.34s/it] 43%|████▎     | 96/222 [10:02<02:59,  1.42s/it] 44%|████▎     | 97/222 [10:04<02:53,  1.39s/it] 44%|████▍     | 98/222 [10:05<02:48,  1.36s/it] 45%|████▍     | 99/222 [10:07<02:56,  1.43s/it] 45%|████▌     | 100/222 [10:08<02:53,  1.42s/it] 45%|████▌     | 101/222 [10:09<02:49,  1.40s/it] 46%|████▌     | 102/222 [10:11<02:47,  1.40s/it] 46%|████▋     | 103/222 [10:12<02:54,  1.47s/it] 47%|████▋     | 104/222 [10:14<02:47,  1.42s/it] 47%|████▋     | 105/222 [10:15<02:41,  1.38s/it] 48%|████▊     | 106/222 [10:16<02:38,  1.36s/it] 48%|████▊     | 107/222 [10:18<02:46,  1.44s/it] 49%|████▊     | 108/222 [10:19<02:39,  1.40s/it] 49%|████▉     | 109/222 [10:20<02:35,  1.38s/it] 50%|████▉     | 110/222 [10:22<02:31,  1.35s/it] 50%|█████     | 111/222 [10:23<02:39,  1.44s/it] 50%|█████     | 112/222 [10:25<02:36,  1.42s/it] 51%|█████     | 113/222 [10:26<02:31,  1.39s/it] 51%|█████▏    | 114/222 [10:28<02:37,  1.45s/it] 52%|█████▏    | 115/222 [10:29<02:30,  1.41s/it] 52%|█████▏    | 116/222 [10:30<02:27,  1.39s/it] 53%|█████▎    | 117/222 [10:32<02:23,  1.36s/it] 53%|█████▎    | 118/222 [10:33<02:29,  1.44s/it] 54%|█████▎    | 119/222 [10:35<02:24,  1.40s/it] 54%|█████▍    | 120/222 [10:36<02:19,  1.37s/it] 55%|█████▍    | 121/222 [10:37<02:15,  1.34s/it] 55%|█████▍    | 122/222 [10:39<02:22,  1.43s/it] 55%|█████▌    | 123/222 [10:40<02:18,  1.40s/it] 56%|█████▌    | 124/222 [10:41<02:14,  1.38s/it] 56%|█████▋    | 125/222 [10:43<02:11,  1.36s/it] 57%|█████▋    | 126/222 [10:44<02:18,  1.44s/it] 57%|█████▋    | 127/222 [10:46<02:13,  1.41s/it] 58%|█████▊    | 128/222 [10:47<02:08,  1.37s/it] 58%|█████▊    | 129/222 [10:49<02:14,  1.45s/it] 59%|█████▊    | 130/222 [10:50<02:09,  1.41s/it] 59%|█████▉    | 131/222 [10:51<02:05,  1.38s/it] 59%|█████▉    | 132/222 [10:53<02:01,  1.35s/it] 60%|█████▉    | 133/222 [10:54<02:07,  1.43s/it] 60%|██████    | 134/222 [10:55<02:02,  1.40s/it] 61%|██████    | 135/222 [10:57<01:58,  1.36s/it] 61%|██████▏   | 136/222 [10:58<01:55,  1.34s/it] 62%|██████▏   | 137/222 [11:00<02:01,  1.43s/it] 62%|██████▏   | 138/222 [11:01<01:56,  1.39s/it] 63%|██████▎   | 139/222 [11:02<01:53,  1.37s/it] 63%|██████▎   | 140/222 [11:04<01:50,  1.35s/it] 64%|██████▎   | 141/222 [11:05<01:55,  1.43s/it] 64%|██████▍   | 142/222 [11:07<01:51,  1.39s/it] 64%|██████▍   | 143/222 [11:08<01:48,  1.37s/it] 65%|██████▍   | 144/222 [11:09<01:52,  1.44s/it] 65%|██████▌   | 145/222 [11:11<01:47,  1.39s/it] 66%|██████▌   | 146/222 [11:12<01:44,  1.38s/it] 66%|██████▌   | 147/222 [11:13<01:41,  1.36s/it] 67%|██████▋   | 148/222 [11:15<01:46,  1.43s/it] 67%|██████▋   | 149/222 [11:16<01:42,  1.40s/it] 68%|██████▊   | 150/222 [11:18<01:38,  1.36s/it] 68%|██████▊   | 151/222 [11:19<01:35,  1.34s/it] 68%|██████▊   | 152/222 [11:20<01:39,  1.42s/it] 69%|██████▉   | 153/222 [11:22<01:35,  1.38s/it] 69%|██████▉   | 154/222 [11:23<01:32,  1.35s/it] 70%|██████▉   | 155/222 [11:24<01:29,  1.34s/it] 70%|███████   | 156/222 [11:26<01:34,  1.43s/it] 71%|███████   | 157/222 [11:27<01:30,  1.39s/it] 71%|███████   | 158/222 [11:29<01:27,  1.37s/it] 72%|███████▏  | 159/222 [11:30<01:30,  1.44s/it] 72%|███████▏  | 160/222 [11:32<01:27,  1.42s/it] 73%|███████▎  | 161/222 [11:33<01:24,  1.38s/it] 73%|███████▎  | 162/222 [11:34<01:21,  1.36s/it] 73%|███████▎  | 163/222 [11:36<01:24,  1.43s/it] 74%|███████▍  | 164/222 [11:37<01:20,  1.40s/it] 74%|███████▍  | 165/222 [11:38<01:17,  1.37s/it] 75%|███████▍  | 166/222 [11:40<01:15,  1.35s/it] 75%|███████▌  | 167/222 [11:41<01:18,  1.43s/it] 76%|███████▌  | 168/222 [11:43<01:15,  1.40s/it] 76%|███████▌  | 169/222 [11:44<01:12,  1.37s/it] 77%|███████▋  | 170/222 [11:45<01:10,  1.35s/it] 77%|███████▋  | 171/222 [11:47<01:12,  1.43s/it] 77%|███████▋  | 172/222 [11:48<01:10,  1.40s/it] 78%|███████▊  | 173/222 [11:50<01:07,  1.37s/it] 78%|███████▊  | 174/222 [11:51<01:09,  1.44s/it] 79%|███████▉  | 175/222 [11:52<01:05,  1.40s/it] 79%|███████▉  | 176/222 [11:54<01:03,  1.37s/it] 80%|███████▉  | 177/222 [11:55<01:00,  1.35s/it] 80%|████████  | 178/222 [11:57<01:02,  1.43s/it] 81%|████████  | 179/222 [11:58<01:01,  1.43s/it] 81%|████████  | 180/222 [11:59<00:58,  1.40s/it] 82%|████████▏ | 181/222 [12:01<00:56,  1.37s/it] 82%|████████▏ | 182/222 [12:02<00:57,  1.45s/it] 82%|████████▏ | 183/222 [12:04<00:54,  1.40s/it] 83%|████████▎ | 184/222 [12:05<00:52,  1.38s/it] 83%|████████▎ | 185/222 [12:06<00:50,  1.37s/it] 84%|████████▍ | 186/222 [12:08<00:51,  1.43s/it] 84%|████████▍ | 187/222 [12:09<00:48,  1.39s/it] 85%|████████▍ | 188/222 [12:10<00:46,  1.36s/it] 85%|████████▌ | 189/222 [12:12<00:47,  1.43s/it] 86%|████████▌ | 190/222 [12:13<00:44,  1.39s/it] 86%|████████▌ | 191/222 [12:15<00:42,  1.36s/it] 86%|████████▋ | 192/222 [12:16<00:39,  1.33s/it] 87%|████████▋ | 193/222 [12:18<00:41,  1.42s/it] 87%|████████▋ | 194/222 [12:19<00:38,  1.39s/it] 88%|████████▊ | 195/222 [12:20<00:36,  1.37s/it] 88%|████████▊ | 196/222 [12:21<00:35,  1.35s/it] 89%|████████▊ | 197/222 [12:23<00:35,  1.43s/it] 89%|████████▉ | 198/222 [12:24<00:33,  1.40s/it] 90%|████████▉ | 199/222 [12:26<00:31,  1.38s/it] 90%|█████████ | 200/222 [12:27<00:29,  1.36s/it] 91%|█████████ | 201/222 [12:29<00:30,  1.43s/it] 91%|█████████ | 202/222 [12:30<00:27,  1.39s/it] 91%|█████████▏| 203/222 [12:31<00:26,  1.38s/it] 92%|█████████▏| 204/222 [12:33<00:25,  1.44s/it] 92%|█████████▏| 205/222 [12:34<00:23,  1.40s/it] 93%|█████████▎| 206/222 [12:35<00:21,  1.36s/it] 93%|█████████▎| 207/222 [12:37<00:20,  1.35s/it] 94%|█████████▎| 208/222 [12:38<00:19,  1.43s/it] 94%|█████████▍| 209/222 [12:40<00:18,  1.39s/it] 95%|█████████▍| 210/222 [12:41<00:16,  1.36s/it] 95%|█████████▌| 211/222 [12:42<00:14,  1.35s/it] 95%|█████████▌| 212/222 [12:44<00:14,  1.43s/it] 96%|█████████▌| 213/222 [12:45<00:12,  1.40s/it] 96%|█████████▋| 214/222 [12:47<00:10,  1.37s/it] 97%|█████████▋| 215/222 [12:48<00:09,  1.34s/it] 97%|█████████▋| 216/222 [12:49<00:08,  1.43s/it] 98%|█████████▊| 217/222 [12:51<00:06,  1.40s/it] 98%|█████████▊| 218/222 [12:52<00:05,  1.37s/it] 99%|█████████▊| 219/222 [12:54<00:04,  1.46s/it] 99%|█████████▉| 220/222 [12:55<00:02,  1.42s/it]100%|█████████▉| 221/222 [12:56<00:01,  1.40s/it]100%|██████████| 222/222 [15:21<00:00, 44.28s/it]100%|██████████| 222/222 [15:21<00:00,  4.15s/it]
+/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/numpy/core/_methods.py:151: RuntimeWarning: invalid value encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims)
+... Finished train_eval set. Completed at 15.413 images / s
+Traceback (most recent call last):
+  File "train_direct.py", line 640, in <module>
+    run_training_wrapper(**vars(args))
+  File "train_direct.py", line 367, in run_training_wrapper
+    exclude_final_layer=params['exclude_final_layer']
+  File "train_direct.py", line 238, in run_training
+    train_metrics = trainer.eval_train(max_nbatches=train_steps_per_epoch)
+  File "/home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py", line 301, in eval_train
+    max_nbatches=max_nbatches)
+  File "/home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py", line 282, in _eval_split
+    eval_summaries=eval_summaries)
+  File "/home/sagemaker-user/reproducible/ModelWorkflow/utils/trainer.py", line 483, in evaluate_preds
+    r2, R2, mse, rank = evaluate(labels_eval, preds_eval, weights=weights)
+  File "/home/sagemaker-user/reproducible/ModelWorkflow/utils/analysis.py", line 61, in evaluate
+    r2 = calc_score(labels=labels, preds=preds, metric='r2', weights=weights)
+  File "/home/sagemaker-user/reproducible/ModelWorkflow/utils/analysis.py", line 27, in calc_score
+    return scipy.stats.pearsonr(labels, preds)[0] ** 2
+  File "/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/scipy/stats/stats.py", line 3868, in pearsonr
+    normym = linalg.norm(ym)
+  File "/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/scipy/linalg/misc.py", line 140, in norm
+    a = np.asarray_chkfinite(a)
+  File "/home/sagemaker-user/reproducible/nexus_experiment/lib/python3.6/site-packages/numpy/lib/function_base.py", line 499, in asarray_chkfinite
+    "array must not contain infs or NaNs")
+ValueError: array must not contain infs or NaNs

@@ -1,0 +1,8 @@
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/models/resnet_model.py:70: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/sagemaker-user/reproducible/ModelWorkflow/utils/run.py:67: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+train_direct.py:48: FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+  import mlflow
+Current time: 1724111686.1812952
+Stopping. Found previous run at: /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/params.json

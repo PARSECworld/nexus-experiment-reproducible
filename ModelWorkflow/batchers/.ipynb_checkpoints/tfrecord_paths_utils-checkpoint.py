@@ -11,7 +11,7 @@ import numpy as np
 from batchers.dataset_constants import TOTAL_SIZE, SIZES, SURVEY_NAMES
 
 
-ROOT_DIR = "/home/sagemaker-user/sagemaker-user/reproducible/data/processed/"
+ROOT_DIR = "/home/sagemaker-user/reproducible/data/processed/"
 DHS_TFRECORDS_PATH_ROOT = ROOT_DIR + "nexus_tfrecords_processed/"
 
 DHSNL_TFRECORDS_PATH_ROOT = os.path.join(ROOT_DIR, 'data/dhsnl_tfrecords')
@@ -116,20 +116,27 @@ def _incountry(dataset: str, splits: Iterable[str], tfrecords_glob_path: str,
         script preserves ordering within each survey.)
     '''
     all_tfrecord_paths = np.sort(glob(tfrecords_glob_path))
+    #print(tfrecords_glob_path)
+    #print(len(all_tfrecord_paths))
+    #print(SIZES[dataset]['all'])
     assert len(all_tfrecord_paths) == SIZES[dataset]['all']
 
     fold = dataset[-1]
     with open(folds_pickle_path, 'rb') as f:
         incountry_folds = pickle.load(f)
         incountry_fold = incountry_folds[fold]
-
+        
     paths: dict[str, np.ndarray] = {}
     for split in splits:
         if split == 'all':
             paths[split] == all_tfrecord_paths
         else:
             indices = incountry_fold[split]
-            paths[split] = all_tfrecord_paths[indices]
+            # !!
+            valid_indices = [i for i in indices if i < len(all_tfrecord_paths)]
+            paths[split] = all_tfrecord_paths[valid_indices]
+        # !!
+        SIZES[dataset][split] = len(paths[split])
         assert len(paths[split]) == SIZES[dataset][split]
     return paths
 

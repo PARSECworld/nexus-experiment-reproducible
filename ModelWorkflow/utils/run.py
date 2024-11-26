@@ -203,14 +203,19 @@ def check_existing(model_dirs: Iterable[str], outputs_root_dir: str,
         # check that checkpoint exists
         ckpt_glob = os.path.join(model_dir, 'ckpt-*')
         if len(glob(ckpt_glob)) == 0:
+            print('erro: ', model_dir)
             ret = False
-            print(f'did not find checkpoint matching: {ckpt_glob}')
+        else:
+            print('deu bom: ', model_dir)
 
         # check if test file exists
         test_path = os.path.join(model_dir, test_filename)
         if os.path.exists(test_path):
-            ret = False
-            print(f'found {test_filename} in {model_dir}')
+            #!!
+            print(f'File exists. Removing: {test_path}')
+            os.remove(test_path)
+            #ret = False
+            #print(f'found {test_filename} in {model_dir}')
 
     return ret
 

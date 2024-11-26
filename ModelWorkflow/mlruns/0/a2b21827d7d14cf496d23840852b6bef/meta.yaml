@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/reproducible/ModelWorkflow/mlruns/0/a2b21827d7d14cf496d23840852b6bef/artifacts
+end_time: 1723679099059
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: a2b21827d7d14cf496d23840852b6bef
+run_uuid: a2b21827d7d14cf496d23840852b6bef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723679055246
+status: 4
+tags: []
+user_id: root

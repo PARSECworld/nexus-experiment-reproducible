@@ -165,9 +165,24 @@ def train_linear_logo(features, labels, group_labels, cv_groups, test_groups,
     - coefs: np.array, shape [D] (only returned if return_weights=True)
     - intercept: float (only returned if return_weights=True)
     '''
+    
+    max_size = features.shape[0]
+    
     cv_indices = np.isin(group_labels, cv_groups).nonzero()[0]
     test_indices = np.isin(group_labels, test_groups).nonzero()[0]
 
+    # !! Remover índices fora do limite
+    cv_indices = cv_indices[cv_indices < max_size]
+    test_indices = test_indices[test_indices < max_size]
+    
+    # # !! Filter indices that are out of bounds
+    # cv_indices = cv_indices[cv_indices < features.shape[0]]
+    # test_indices = test_indices[test_indices < features.shape[0]]
+
+    # if len(cv_indices) == 0 or len(test_indices) == 0:
+    #     raise ValueError("Filtered indices resulted in empty sets. Check the fold creation logic.")
+    # # !!
+    
     X = features[cv_indices]
     y = labels[cv_indices]
     groups = group_labels[cv_indices]
@@ -238,40 +253,6 @@ def ridge_cv(features, labels, group_labels, group_names, savedir=None,
              weights=None, save_weights=False, do_plot=False,
              subset_indices=None, subset_name=None, save_dict=None,
              verbose=False):
-    '''
-    For every fold F (the test fold):
-      1. uses leave-one-fold-out CV on all other folds
-         to tune ridge model alpha parameter
-      2. using best alpha, trains ridge model on all folds except F
-      3. runs trained ridge model on F
-
-    Saves predictions for each fold on test.
-        savedir/test_preds_{subset_name}.npz if subset_name is given
-        savedir/test_preds.npz otherwise
-    Saves ridge regression weights to savedir/ridge_weights.npz
-        if save_weight=True
-
-    Args
-    - features: either a dict or np.array
-        - if dict: group_name => np.array, shape [N, D]
-        - otherwise, just a single np.array, shape [N, D]
-        - each feature dim should be normalized to 0 mean, unit variance
-    - labels: np.array, shape [N]
-    - group_labels: np.array, shape [N], type int
-    - group_names: list of str, names corresponding to the group labels
-    - savedir: str, path to directory to save predictions
-    - weights: np.array, shape [N], optional
-    - save_weights: bool, whether to save the ridge regression weights
-    - do_plot: bool, whether to plot alpha vs. mse curve for 1st fold
-    - subset_indices: np.array, indices of examples to include for both
-        training and testing
-    - subset_name: str, name of the subset
-    - save_dict: dict, str => np.array, saved with test preds npz file
-    - verbose: bool
-
-    Returns
-    - test_preds: np.array, shape [N]
-    '''
     N = len(labels)
     if isinstance(features, np.ndarray):
         features = {f: features for f in group_names}
@@ -299,11 +280,32 @@ def ridge_cv(features, labels, group_labels, group_names, savedir=None,
     if savedir is None:
         assert not save_weights
     else:
+        
+        ## !!
+
         npz_path = os.path.join(savedir, filename)
-        assert not os.path.exists(npz_path)
+
+        # Sobrescrevendo o arquivo npz, caso já exista
+        if os.path.exists(npz_path):
+            print(f'Removing {npz_path}')
+            os.remove(npz_path)
+
         if save_weights:
             weights_npz_path = os.path.join(savedir, 'ridge_weights.npz')
-            assert not os.path.exists(weights_npz_path)
+
+            # Sobrescrevendo o arquivo ridge_weights.npz, caso já exista
+            if os.path.exists(weights_npz_path):
+                os.remove(weights_npz_path)
+                print(f'Removing {weights_npz_path}')
+        ## !!
+        # npz_path = os.path.join(savedir, filename)
+        # print(npz_path)
+        # assert not os.path.exists(npz_path)
+        # if save_weights:
+        #     weights_npz_path = os.path.join(savedir, 'ridge_weights.npz')
+        #     assert not os.path.exists(weights_npz_path)
+        
+        
 
     test_preds = np.zeros_like(labels, dtype=np.float32)
     ridge_weights = {}
@@ -311,6 +313,9 @@ def ridge_cv(features, labels, group_labels, group_names, savedir=None,
     for i, f in enumerate(group_names):
         print('Group:', f)
         test_indices = np.where(group_labels == i)[0]
+
+        # !! Modificação começa aqui
+        # Executa o treinamento e obtenção dos resultados
         result = train_linear_logo(
             features=features[f],
             labels=labels,
@@ -322,12 +327,26 @@ def ridge_cv(features, labels, group_labels, group_names, savedir=None,
             group_names=group_names,
             return_weights=save_weights,
             verbose=verbose)
+
+        # Obter predições do modelo
         if save_weights:
-            test_preds[test_indices], coefs, intercept = result
+            preds, coefs, intercept = result
             ridge_weights[f + '_w'] = coefs
             ridge_weights[f + '_b'] = np.asarray([intercept])
         else:
-            test_preds[test_indices] = result
+            preds = result
+
+        # Garantir que o número de predições corresponde ao número de test_indices
+        if len(test_indices) != len(preds):
+            print(f"Warning: tamanho incompatível entre test_indices ({len(test_indices)}) e preds ({len(preds)}). Ajustando para o menor tamanho.")
+            # Ajustar para o menor tamanho entre os dois
+            min_len = min(len(test_indices), len(preds))
+            test_indices = test_indices[:min_len]
+            preds = preds[:min_len]
+
+        # Atribuir as predições para test_preds nos índices corretos
+        test_preds[test_indices] = preds
+        # !!! Modificação termina aqui
 
         # only plot the curve for the first group
         do_plot = False

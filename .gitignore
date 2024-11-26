@@ -13,3 +13,5 @@ _*
 *.xlsx
 *.feather
 *.parquet
+*.zip
+nexus_experiment/

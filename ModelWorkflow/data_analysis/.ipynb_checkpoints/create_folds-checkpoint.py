@@ -8,7 +8,7 @@ import scipy.spatial
 import sklearn.cluster
 
 import os
-os.chdir('/root/reproducible/Datasets/SelectedClusters')
+os.chdir('/home/sagemaker-user/reproducible/Datasets/SelectedClusters')
 from utils.geo_plot import plot_locs
 
 

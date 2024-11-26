@@ -1,2 +1,2 @@
-model_checkpoint_path: "/root/final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/ckpt-150"
-all_model_checkpoint_paths: "/root/final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/ckpt-150"
+model_checkpoint_path: "/home/sagemaker-user/reproducible/final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/ckpt-2"
+all_model_checkpoint_paths: "/home/sagemaker-user/reproducible/final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/ckpt-2"
