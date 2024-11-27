@@ -29,7 +29,7 @@ git remote set-url origin https://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@githu
 git config --global user.name "leoczzi"
 git config --global user.email "leoczzi@yahoo.com"
 
-git push --set-upstream origin develop
+# git push --set-upstream origin develop
 
 deactivate
 
