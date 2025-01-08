@@ -22,13 +22,13 @@ execute_and_log() {
   fi
 }
 
-# Script para adicionar arquivos ao DVC e empurrá-los para o S3
+# Script principal
 {
   echo "Início: $(date)"
 
   . nexus_experiment/bin/activate
 
-  # Verificar e configurar credenciais Git se necessário
+  # Configurar credenciais do Git
   if [ -z "$(git config --global user.email)" ]; then
     git config --global user.email "leoczzi@yahoo.com"
   fi
@@ -37,59 +37,43 @@ execute_and_log() {
     git config --global user.name "leoczzi"
   fi
 
-  # Configurar o remote do DVC
-  echo "Setting 'myremote' as a default remote."
+  # Adicionar regras ao .gitignore
+  echo -e "\n# Arquivos grandes ignorados\n*.gz\n*.tfrecord" >> .gitignore
+  execute_and_log "git add .gitignore"
+  execute_and_log "git commit -m 'Atualizando .gitignore para ignorar arquivos grandes'"
 
-  # Remover arquivos de lock corrompidos
+  # Configurar o remote do DVC e remover locks
+  echo "Setting 'myremote' as a default remote."
   rm -f .dvc/tmp/rwlock .dvc/tmp/lock
 
   # Adicionar arquivos ao DVC
-  execute_and_log "time dvc add final_ex/income/dhsincountry/*.0_lr0001"
-  execute_and_log "time dvc add final_ex/literacy/dhsincountry/*.0_lr0001"
-  execute_and_log "time dvc add logs/income/*.csv"
-  execute_and_log "time dvc add logs/literacy/*.csv"
-  execute_and_log "time dvc add data/interim/*.csv"
-  execute_and_log "time dvc add data/processed/*.csv"
-  execute_and_log "time dvc add data/raw/nexus_tfrecords_raw/*.gz"
-  execute_and_log "time dvc add data/raw/NexusIndicators/*.csv"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ac_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/al_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/am_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ap_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ba_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ce_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/df_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/es_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/go_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ma_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/mg_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ms_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/mt_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/pa_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/pb_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/pe_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/pi_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/pr_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/rj_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/rn_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/ro_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/rr_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/rs_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/sc_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/se_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/sp_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/raw/setores_shapefile/to_setores_censitarios/*.{dbf,prj,shp,shx}"
-  execute_and_log "time dvc add data/processed/nexus_tfrecords_processed/brazil_2010/*.gz"
-    
-  # Executando o script Python para gerar metadados  
+  for dir in \
+    "final_ex/income/dhsincountry/*.0_lr0001" \
+    "final_ex/literacy/dhsincountry/*.0_lr0001" \
+    "logs/income/*.csv" \
+    "logs/literacy/*.csv" \
+    "data/interim/*.csv" \
+    "data/processed/*.csv" \
+    "data/raw/nexus_tfrecords_raw/*.gz" \
+    "data/raw/NexusIndicators/*.csv" \
+    "data/raw/setores_shapefile/**/*.dbf" \
+    "data/raw/setores_shapefile/**/*.prj" \
+    "data/raw/setores_shapefile/**/*.shp" \
+    "data/raw/setores_shapefile/**/*.shx" \
+    "data/processed/nexus_tfrecords_processed/brazil_2010/*.gz"
+  do
+    execute_and_log "time dvc add $dir"
+  done
+
+  # Executar o script Python para gerar metadados
   execute_and_log "time python generate_metadata.py"
-  
-  # Empurrar para armazenamento remoto
+
+  # Empurrar arquivos gerenciados pelo DVC para o armazenamento remoto
   execute_and_log "time dvc push"
 
-  # Adicionar arquivos ao Git e fazer commit
+  # Adicionar arquivos DVC ao Git
   execute_and_log "git add ."
-  execute_and_log "git commit -m 'Adding and pushing files to DVC and Git with metadata'"
+  execute_and_log "git commit -m 'Adicionando arquivos DVC e metadados gerados'"
   execute_and_log "git push"
 
   echo "Término: $(date)"

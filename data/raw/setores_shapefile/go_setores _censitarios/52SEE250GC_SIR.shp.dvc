@@ -1,0 +1,18 @@
+meta:
+  bounding_box:
+  - -53.251209333853694
+  - -19.4991508113737
+  - -45.9069681830834
+  - -12.395210303533398
+  checksum: 49b238a8843dd7fe12999fd3fa6e25c6
+  creation_date: '2024-12-21T00:09:48.196000'
+  crs:
+    init: epsg:4674
+  description: Shapefile 52SEE250GC_SIR.shp
+  file_size: 25023920
+  format: shp
+  modification_date: '2024-12-21T00:09:48.192000'
+  number_of_records: 9491
+outs:
+- md5: 49b238a8843dd7fe12999fd3fa6e25c6
+  path: 52SEE250GC_SIR.shp

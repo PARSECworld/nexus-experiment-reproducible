@@ -1,5 +1,5 @@
 meta:
-  checksum: 64cdac153ad77f754556bd6604bf1fbc
+  checksum: dbb0e0c2bbd55135682399265cf7926f
   column_names:
   - lat
   - lon
@@ -7,28 +7,16 @@ meta:
   - year
   - urban
   - label
-  - KNN NL center scalar
-  - KNN NL hist
-  - KNN NL mean scalar
-  - Resnet-18 MS - ADE
-  - Resnet-18 MS - All
   - Resnet-18 MS - E
   - Resnet-18 MS+NL concat
   - Resnet-18 NL
-  - Ridge MS hist
-  - Ridge MS+NL hist
-  - Ridge NL center scalar
-  - Ridge NL hist
-  - Ridge NL mean scalar
-  - Ridge RGB hist
-  - Ridge RGB+NL hist
-  creation_date: '2024-07-31T02:05:23.267000'
+  creation_date: '2024-12-20T17:45:04.498000'
   description: CSV file dhs_incountry_predsnew.csv
-  file_size: 6269394
+  file_size: 1928616
   format: csv
-  modification_date: '2024-07-25T04:14:04.313000'
-  number_of_columns: 21
-  number_of_records: 30000
+  modification_date: '2024-12-20T17:45:04.493000'
+  number_of_columns: 9
+  number_of_records: 23675
 outs:
-- md5: 64cdac153ad77f754556bd6604bf1fbc
+- md5: dbb0e0c2bbd55135682399265cf7926f
   path: dhs_incountry_predsnew.csv

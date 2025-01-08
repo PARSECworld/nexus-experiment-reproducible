@@ -8,7 +8,7 @@ meta:
   - income
   - literacy
   - longevity
-  creation_date: '2024-07-31T02:09:27.492000'
+  creation_date: '2024-12-20T17:49:07.992000'
   description: CSV file clusters_data_9000.0km.csv
   file_size: 2530374
   format: csv

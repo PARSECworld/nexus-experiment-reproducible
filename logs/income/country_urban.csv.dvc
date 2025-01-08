@@ -1,5 +1,5 @@
 meta:
-  checksum: 28ad6803482c8352d018c5c02526f7d5
+  checksum: 1bab2db18edded83d24ef7cce1d60517
   column_names:
   - country
   - urban
@@ -8,13 +8,13 @@ meta:
   - R2
   - mse
   - rank
-  creation_date: '2024-07-31T02:04:59.325000'
+  creation_date: '2024-12-20T17:44:39.667000'
   description: CSV file country_urban.csv
-  file_size: 1579
+  file_size: 366
   format: csv
-  modification_date: '2024-07-25T04:14:00.416000'
+  modification_date: '2024-12-20T17:44:39.663000'
   number_of_columns: 7
-  number_of_records: 15
+  number_of_records: 3
 outs:
-- md5: 28ad6803482c8352d018c5c02526f7d5
+- md5: 1bab2db18edded83d24ef7cce1d60517
   path: country_urban.csv

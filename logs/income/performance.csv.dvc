@@ -1,18 +1,18 @@
 meta:
-  checksum: 58e04ba67f18a4fff91767238a1d5377
+  checksum: 85346ff36069ef2ca7880f11fefbb6fc
   column_names:
   - 'Unnamed: 0'
   - r2
   - R2
   - mse
   - rank
-  creation_date: '2024-07-31T02:05:46.165000'
+  creation_date: '2024-12-20T17:45:39.099000'
   description: CSV file performance.csv
-  file_size: 1365
+  file_size: 308
   format: csv
-  modification_date: '2024-07-25T04:14:17.797000'
+  modification_date: '2024-12-20T17:45:39.094000'
   number_of_columns: 5
-  number_of_records: 15
+  number_of_records: 3
 outs:
-- md5: 58e04ba67f18a4fff91767238a1d5377
+- md5: 85346ff36069ef2ca7880f11fefbb6fc
   path: performance.csv

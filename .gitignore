@@ -16,3 +16,11 @@ _*
 *.zip
 nexus_experiment/
 ModelWorkflow/mlruns/
+
+# Arquivos grandes ignorados
+*.gz
+*.tfrecord
+
+# Arquivos grandes ignorados
+*.gz
+*.tfrecord

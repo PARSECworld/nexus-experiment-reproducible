@@ -6,7 +6,7 @@ meta:
   - IDHL-Setor
   - AlfabIDHM
   - RendaIDHM
-  creation_date: '2024-07-31T07:44:12.317000'
+  creation_date: '2024-12-20T23:38:36.407000'
   description: CSV file IDHM_NEXUS_PE.csv
   file_size: 415725
   format: csv
