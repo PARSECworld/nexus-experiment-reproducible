@@ -40509,7 +40509,7 @@ SUCCESS: data/raw/setores_shapefile/pb_setores_censitarios/25SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/am_setores_censitarios/13SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/ma_setores_censitarios/21SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/sc_setores_censitarios/42SEE250GC_SIR.shp
-ERROR: data/raw/setores_shapefile/go_setores _censitarios/52SEE250GC_SIR.shp - .dvc file does not exist
+SUCCESS: data/raw/setores_shapefile/go_setores _censitarios/52SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/rj_setores_censitarios/33SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/mg_setores_censitarios/31SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/rr_setores_censitarios/14SEE250GC_SIR.shp
@@ -40520,26 +40520,36 @@ SUCCESS: data/raw/setores_shapefile/es_setores_censitarios/32SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/se_setores_censitarios/28SEE250GC_SIR.shp
 SUCCESS: data/raw/setores_shapefile/ce_setores_censitarios/23SEE250GC_SIR.shp
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_C_ms_samescaled_200_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/income/dhsincountry/DHS_Incountry_C_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_C_ms_samescaled_RN50_200_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/income/dhsincountry/DHS_Incountry_E_nl_random_b64_fc1_conv1.0_lr001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_200_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
-ERROR: final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_150_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_E_ms_samescaled_RN50_200_b64_fc001_conv001_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/income/dhsincountry/DHS_Incountry_A_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_E_ms_samescaled_200_b64_fc001_conv001_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/income/dhsincountry/DHS_Incountry_D_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_C_ms_samescaled_200_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_C_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_C_ms_samescaled_RN50_200_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_E_nl_random_b64_fc1_conv1.0_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_A_ms_samescaled_200_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_A_ms_samescaled_RN50_150_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_E_ms_samescaled_RN50_200_b64_fc001_conv001_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_A_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_A_ms_samescaled_RN50_200_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_E_ms_samescaled_200_b64_fc001_conv001_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_D_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_D_ms_samescaled_200_b64_fc001_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_B_ms_samescaled_200_b64_fc1_conv1_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_B_ms_samescaled_RN50_200_b64_fc1_conv1_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_B_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/income/dhsincountry/_backup/DHS_Incountry_D_ms_samescaled_RN50_200_b64_fc001_conv1.0_lr0001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_D_ms_samescaled_200_b64_fc001_conv1.0_lr0001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_B_ms_samescaled_200_b64_fc1_conv1_lr001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_B_ms_samescaled_RN50_200_b64_fc1_conv1_lr001/results.csv - .dvc file does not exist
-ERROR: final_ex/income/dhsincountry/DHS_Incountry_B_nl_random_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
 ERROR: final_ex/income/dhsincountry/DHS_Incountry_D_ms_samescaled_RN50_200_b64_fc001_conv1.0_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/literacy/dhsincountry/DHS_Incountry_D_ms_samescaled_b64_fc001_conv1.0_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/literacy/dhsincountry/DHS_Incountry_B_ms_samescaled_b64_fc1_conv1_lr001/results.csv - .dvc file does not exist
-ERROR: final_ex/literacy/dhsincountry/DHS_Incountry_A_ms_samescaled_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
-ERROR: final_ex/literacy/dhsincountry/DHS_Incountry_E_ms_samescaled_b64_fc001_conv001_lr0001/results.csv - .dvc file does not exist
-ERROR: final_ex/literacy/dhsincountry/DHS_Incountry_C_ms_samescaled_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/literacy/dhsincountry/_backup/DHS_Incountry_D_ms_samescaled_b64_fc001_conv1.0_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/literacy/dhsincountry/_backup/DHS_Incountry_B_ms_samescaled_b64_fc1_conv1_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/literacy/dhsincountry/_backup/DHS_Incountry_A_ms_samescaled_b64_fc01_conv01_lr001/results.csv - .dvc file does not exist
+ERROR: final_ex/literacy/dhsincountry/_backup/DHS_Incountry_E_ms_samescaled_b64_fc001_conv001_lr0001/results.csv - .dvc file does not exist
+ERROR: final_ex/literacy/dhsincountry/_backup/DHS_Incountry_C_ms_samescaled_b64_fc1.0_conv1.0_lr0001/results.csv - .dvc file does not exist
 SUCCESS: logs/income/performance.csv
 SUCCESS: logs/income/dhs_incountry_predsnew.csv
 SUCCESS: logs/income/country.csv
@@ -40584,13 +40594,13 @@ data/processed/nexus_tfrecords_processed/brazil_2010:
   Errors: 19123
   Missing .dvc: 19123
 data/raw/setores_shapefile:
-  Success: 26
-  Errors: 1
-  Missing .dvc: 1
+  Success: 27
+  Errors: 0
+  Missing .dvc: 0
 final_ex/income:
   Success: 0
-  Errors: 16
-  Missing .dvc: 16
+  Errors: 26
+  Missing .dvc: 26
 final_ex/literacy:
   Success: 0
   Errors: 5
@@ -40616,6 +40626,6 @@ data/raw/NexusIndicators:
   Errors: 0
   Missing .dvc: 0
 
-Total Success: 5398
-Total Errors: 19147
-Total Missing .dvc: 19146
+Total Success: 5399
+Total Errors: 19156
+Total Missing .dvc: 19155

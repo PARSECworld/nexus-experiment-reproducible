@@ -1,7 +1,8 @@
-from __future__ import annotations
+# from __future__ import annotations
 
-from collections.abc import Mapping
+# from collections.abc import Mapping
 from typing import Any, Optional
+from typing import Tuple
 
 import ee
 import pandas as pd
@@ -40,7 +41,7 @@ def df_to_fc(df: pd.DataFrame, lat_colname: str = 'lat',
     return ee.FeatureCollection(ee_features)
 
 
-def surveyyear_to_range(survey_year: int, nl: bool = False) -> tuple[str, str]:
+def surveyyear_to_range(survey_year: int, nl: bool = False) -> Tuple[str, str]:
     '''Returns the start and end dates for filtering satellite images for a
     survey beginning in the specified year.
 
@@ -290,7 +291,7 @@ def get_array_patches(img: ee.Image,
                       fname=fname, selectors=selectors,
                       dropselectors=dropselectors, bucket=bucket)
 
-
+from typing import Mapping
 def wait_on_tasks(tasks: Mapping[Any, ee.batch.Task],
                   show_probar: bool = True,
                   poll_interval: int = 20,

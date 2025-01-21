@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 # # to DHS incountry MS B (1996-2019) fait /terminal 
@@ -25,7 +25,7 @@
 #         > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_B_ms_samescaled_20.txt 2>&1
 
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -35,13 +35,13 @@
 
 # #### 
 
-# In[3]:
+# In[ ]:
 
 
 
 
 
-# In[3]:
+# In[2]:
 
 
 # DHS incountry MS A (2000-2019)
@@ -69,7 +69,7 @@ def monitor_memory():
 
 # Executar o comando em segundo plano
 def execute_command():
-    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 2             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_A_ms_samescaled_200             --dataset DHS_incountry_A             --ls_band ms             --lr 0.001 --fc_reg 0.01 --conv_reg 0.01             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_A_ms_samescaled_200.txt 2>&1')
+    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 200             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_A_ms_samescaled_200             --dataset DHS_incountry_A             --ls_band ms             --lr 0.001 --fc_reg 0.01 --conv_reg 0.01             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_A_ms_samescaled_200.txt 2>&1')
 # Start monitoring memory usage in a separate thread
 memory_thread = threading.Thread(target=monitor_memory)
 memory_thread.start()
@@ -78,7 +78,7 @@ memory_thread.start()
 execute_command()
 
 
-# In[2]:
+# In[ ]:
 
 
 import psutil
@@ -99,7 +99,7 @@ def monitor_memory():
 
 # Executar o comando em segundo plano
 def execute_command():
-    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py         --label_name income         --hs_weight_init samescaled        --model_name resnet --num_layers 18         --lr_decay 0.96 --batch_size 64         --gpu 0 --num_threads 5         --cache train train_eval val         --augment --eval_every 1 --print_every 40         --max_epochs 2         --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/         --keep_frac 1.0 --seed 123         --experiment_name DHS_Incountry_B_ms_samescaled_200         --dataset DHS_incountry_B         --ls_band ms         --lr 0.001 --fc_reg 0.1 --conv_reg 0.1         --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz         >> /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_B_ms_samescaled_200.txt 2>&1')
+    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py         --label_name income         --hs_weight_init samescaled        --model_name resnet --num_layers 18         --lr_decay 0.96 --batch_size 64         --gpu 0 --num_threads 5         --cache train train_eval val         --augment --eval_every 1 --print_every 40         --max_epochs 200         --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/         --keep_frac 1.0 --seed 123         --experiment_name DHS_Incountry_B_ms_samescaled_200         --dataset DHS_incountry_B         --ls_band ms         --lr 0.001 --fc_reg 0.1 --conv_reg 0.1         --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz         >> /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_B_ms_samescaled_200.txt 2>&1')
 
 # Start monitoring memory usage in a separate thread
 memory_thread = threading.Thread(target=monitor_memory)
@@ -109,7 +109,7 @@ memory_thread.start()
 execute_command()
 
 
-# In[5]:
+# In[ ]:
 
 
 #DHS incountry MS C (1996-2016)
@@ -132,7 +132,7 @@ def monitor_memory():
 
 # Executar o comando em segundo plano
 def execute_command():
-    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 2             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_C_ms_samescaled_200             --dataset DHS_incountry_C             --ls_band ms             --lr 0.0001 --fc_reg 1.0 --conv_reg 1.0             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_C_ms_samescaled_200.txt 2>&1')
+    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 200             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_C_ms_samescaled_200             --dataset DHS_incountry_C             --ls_band ms             --lr 0.0001 --fc_reg 1.0 --conv_reg 1.0             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_C_ms_samescaled_200.txt 2>&1')
 # Start monitoring memory usage in a separate thread
 memory_thread = threading.Thread(target=monitor_memory)
 memory_thread.start()
@@ -141,7 +141,7 @@ memory_thread.start()
 execute_command()
 
 
-# In[4]:
+# In[ ]:
 
 
 #DHS incountry MS D (1996-2016)
@@ -160,11 +160,11 @@ def monitor_memory():
             mem_info = psutil.virtual_memory()
             log_file.write(f"Uso de memória: {mem_info.percent}%\n")
             log_file.flush()  # Certifique-se de que os dados são gravados no arquivo
-            time.sleep(1)
+            time.sleep(1)|
 
 # Executar o comando em segundo plano
 def execute_command():
-    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 2             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_D_ms_samescaled_200             --dataset DHS_incountry_D             --ls_band ms             --lr 0.0001 --fc_reg 0.001 --conv_reg 1.0             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_D_ms_samescaled_200.txt 2>&1')
+    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 200             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_D_ms_samescaled_200             --dataset DHS_incountry_D             --ls_band ms             --lr 0.0001 --fc_reg 0.001 --conv_reg 1.0             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_D_ms_samescaled_200.txt 2>&1')
 # Start monitoring memory usage in a separate thread
 memory_thread = threading.Thread(target=monitor_memory)
 memory_thread.start()
@@ -196,7 +196,7 @@ def monitor_memory():
 
 # Executar o comando em segundo plano
 def execute_command():
-    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 2             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_E_ms_samescaled_200             --dataset DHS_incountry_E             --ls_band ms             --lr 0.0001 --fc_reg 0.001 --conv_reg 0.001             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_E_ms_samescaled_200.txt 2>&1 ')
+    get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/python train_direct.py             --label_name income             --hs_weight_init samescaled            --model_name resnet --num_layers 18             --lr_decay 0.96 --batch_size 64             --gpu 0 --num_threads 5             --cache train train_eval val             --augment --eval_every 1 --print_every 40             --max_epochs 200             --out_dir /home/sagemaker-user/reproducible/final_ex/income/dhsincountry/             --keep_frac 1.0 --seed 123             --experiment_name DHS_Incountry_E_ms_samescaled_200             --dataset DHS_incountry_E             --ls_band ms             --lr 0.0001 --fc_reg 0.001 --conv_reg 0.001             --imagenet_weights_path /home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz             > /home/sagemaker-user/reproducible/logs/training/train_log_DHS_Incountry_E_ms_samescaled_200.txt 2>&1 ')
 # Start monitoring memory usage in a separate thread
 memory_thread = threading.Thread(target=monitor_memory)
 memory_thread.start()
@@ -215,6 +215,12 @@ execute_command()
 
 
 # # RESNET 50 Test (with Income)
+
+# In[ ]:
+
+
+1
+
 
 # In[ ]:
 
@@ -539,7 +545,7 @@ execute_command()
 #         > /home/sagemaker-user/reproducible/logs/training/extract_features_nl.txt 2>&1 
 
 
-# In[1]:
+# In[ ]:
 
 
 #DHS_Incountry_E_nl
@@ -557,7 +563,7 @@ def monitor_memory():
             mem_info = psutil.virtual_memory()
             log_file.write(f"Uso de memória: {mem_info.percent}%\n")
             log_file.flush()  # Certifique-se de que os dados são gravados no arquivo
-            time.sleep(1)
+            time.sleep(60)
 
 # Executar o comando em segundo plano
 def execute_command():
@@ -582,13 +588,13 @@ get_ipython().system('/home/sagemaker-user/reproducible/nexus_experiment/bin/pyt
 # !/home/sagemaker-user/reproducible/nexus_experiment/bin/python extract_features_ms.py
 
 
-# In[4]:
+# In[ ]:
 
 
 home(/sagemaker-user/reproducible/final_ex/income/dhsincountry/DHS_Incountry_C_ms_samescaled_200_b64_fc1.0_conv1.0_lr0001)
 
 
-# In[7]:
+# In[ ]:
 
 
 1

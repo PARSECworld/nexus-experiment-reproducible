@@ -1,8 +1,8 @@
 {
     "experiment_name": "DHS_Incountry_E_ms_samescaled_200",
-    "out_dir": "/home/sagemaker-user/reproducible/final_ex/income/dhsincountry/",
+    "out_dir": "/root/final_ex/income/dhsincountry/",
     "init_ckpt_dir": null,
-    "imagenet_weights_path": "/home/sagemaker-user/reproducible/resnet/ImageNet-ResNet18.npz",
+    "imagenet_weights_path": "/root/resnet/ImageNet-ResNet18.npz",
     "hs_weight_init": "samescaled",
     "exclude_final_layer": false,
     "label_name": "income",

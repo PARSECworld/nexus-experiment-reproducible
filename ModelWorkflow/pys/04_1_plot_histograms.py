@@ -15,19 +15,6 @@
 # In[2]:
 
 
-get_ipython().system('pip install matplotlib')
-get_ipython().system('pip install seaborn')
-
-
-# In[3]:
-
-
-get_ipython().system('pip install scikit-learn')
-
-
-# In[4]:
-
-
 from collections import defaultdict
 import os
 import pickle
@@ -54,7 +41,7 @@ from utils.plot import scatter_preds
 
 # # Important Constants
 
-# In[5]:
+# In[3]:
 
 
 # os.environ['CUDA_VISIBLE_DEVICES'] = ''
@@ -79,7 +66,7 @@ print(LOGS_ROOT_DIR)
 
 # Constants to Plot the Histograms
 
-# In[6]:
+# In[4]:
 
 
 # BAND_BIN_EDGES = [-10^5, -5.0, -4.9, -4.8, ..., 4.8, 4.9, 5.0, 10^5]
@@ -121,7 +108,7 @@ BANDS_DICT = {
 }
 
 
-# In[7]:
+# In[5]:
 
 
 def get_batcher(tfrecord_files, label):
@@ -166,7 +153,7 @@ def get_batcher(tfrecord_files, label):
 
 # Function that Creates the .npz Files - Containing the information to plot the histograms
 
-# In[8]:
+# In[6]:
 
 
 def generate_image_histogram(label):
@@ -205,7 +192,7 @@ def generate_image_histogram(label):
     
 
 
-# In[9]:
+# In[7]:
 
 
 indicators = ["income","longevity","literacy"]
@@ -215,13 +202,13 @@ for indicator in indicators:
 
 # Verifying the .npz files
 
-# In[10]:
+# In[8]:
 
 
 print(1)
 
 
-# In[13]:
+# In[9]:
 
 
 indicators = ["income","longevity","literacy"]
@@ -244,7 +231,7 @@ for label in indicators:
 
 # ## Split NL band
 
-# In[14]:
+# In[10]:
 
 
 indicators = ["income","longevity","literacy"]
@@ -261,7 +248,7 @@ for label in indicators:
 
 # ## Plot histograms
 
-# In[15]:
+# In[11]:
 
 
 indicators = ["income","longevity","literacy"]
@@ -290,10 +277,4 @@ for i,label in enumerate(indicators):
         bin_edges=LABEL_BIN_EDGES,
         title=f'label distributions - {label}',
         figsize=(5, 3))
-
-
-# In[ ]:
-
-
-
 

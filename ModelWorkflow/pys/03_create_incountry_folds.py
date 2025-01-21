@@ -58,7 +58,7 @@
 
 # Downloading the Libraries
 
-# In[3]:
+# In[2]:
 
 
 # !apt-get install -y libproj-dev proj-d|ata proj-bin
@@ -70,25 +70,19 @@
 # !pip install pandas
 
 
-# In[4]:
+# In[3]:
 
 
 # !pip install scipy
 
 
-# In[5]:
+# In[4]:
 
 
 # !pip install scikit-learn
 
 
-# In[6]:
-
-
-get_ipython().system('pip install Cartopy')
-
-
-# In[7]:
+# In[5]:
 
 
 # !apt-get update
@@ -96,14 +90,13 @@ get_ipython().system('pip install Cartopy')
 # Y
 
 
-# In[2]:
+# In[6]:
 
 
 import pickle
 from pprint import pprint
 
 import numpy as np
-import pandas as pd
 
 #from batchers import dataset_constants
 from preprocessing.create_folds import (
@@ -115,7 +108,7 @@ from preprocessing.create_folds import (
 
 # Important Constants - Fold Names and minimun distance between Folds of the same group
 
-# In[3]:
+# In[7]:
 
 
 FOLDS = ['A', 'B', 'C', 'D', 'E']
@@ -124,7 +117,7 @@ MIN_DIST = 0.092841  # see how this value is computed below
 
 # Paths to Required Files
 
-# In[4]:
+# In[8]:
 
 
 BASE_PATH =  "/home/sagemaker-user/reproducible/data/processed/"
@@ -157,7 +150,7 @@ FOLDS_PKL_OUTPUT_PATH = BASE_PATH + "dhs_incountry_co.pkl"
 # 
 # This means that for the purpose of deciding image overlap, we assume each satellite image to have width=0.070361° and height=0.060570°. (We take the maximum across the DHS and LSMS datasets.) Because images may overlap in corners, we consider any two images within $$\sqrt{0.060570^2 + 0.070361^2} = 0.092841$$ degrees (lat, lon) to be overlapping. This is the value of the `MIN_DIST` constant above.
 
-# In[5]:
+# In[9]:
 
 
 RADIUS_EARTH = 6356.7523  # in km, polar radius of Earth
@@ -221,13 +214,19 @@ def print_loc_stats(locs: np.ndarray) -> None:
     print(f'maximum side_lon: {side_lon:.6f}')
 
 
-# In[11]:
+# In[10]:
 
 
 DATASET_CSV_PATH
 
 
-# In[6]:
+# In[12]:
+
+
+import pandas as pd
+
+
+# In[13]:
 
 
 dhs_df = pd.read_csv(DATASET_CSV_PATH, float_precision='high', index_col=False)
@@ -238,15 +237,21 @@ dhs_df.describe()
 
 # MIN_DIST = 0.086## Create In-country Folds
 # 
-# Using the DBSCAN algorithm, we group the survey clusters such that each group has a minimum distance of `MIN_DIST` from every other group. These are called "in-country" folds because different clusters from same country may be split across different folds. This is in contrast to the "out-of-country" (OOC) folds where the countries themselves are assigned to different folds.
+# Using the DBSCAN algorithm, we group the survey clusters such that each group has a minimum distance of `MIN_DIST` from every other group. These are called "in-|country" folds because different clusters from same country may be split across different folds. This is in contrast to the "out-of-country" (OOC) folds where the countries themselves are assigned to different folds.
 
-# In[7]:
-
-
-MIN_DIST = 0.086
+# In[14]:
 
 
-# In[8]:
+MIN_DIST = 0.082
+
+
+# In[19]:
+
+
+FOLDS_PKL_OUTPUT_PATH
+
+
+# In[15]:
 
 
 dhs_incountry_test_folds = create_folds(
@@ -271,7 +276,7 @@ save_folds(
     check_exists=False)
 
 
-# In[9]:
+# In[16]:
 
 
 with open(FOLDS_PKL_OUTPUT_PATH,'rb') as f:
@@ -279,13 +284,13 @@ with open(FOLDS_PKL_OUTPUT_PATH,'rb') as f:
     print(dhs_incountry_folds)
 
 
-# In[21]:
+# In[17]:
 
 
 dhs_incountry_folds['A']
 
 
-# In[22]:
+# In[18]:
 
 
 len(dhs_incountry_folds['A']['test']) + len(dhs_incountry_folds['A']['train']) +  len(dhs_incountry_folds['A']['val'])

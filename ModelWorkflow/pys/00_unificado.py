@@ -1,22 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-
-
-# !pip install --upgrade certifi
-# !pip install google-colab
-# pip install --use-pep517 google-colab
-# pip install google-colab
-
-# from google.colab import drive
-# drive.mount("/content/drive",force_remount = True)
-
-# %cd drive/Shareddrives/'NEXUS-PARSEC - TCCs'/ProjetoRaf-Car-Igor/data/indicadores_IDH_Nexus
-
-
 # In[4]:
 
 
@@ -30,7 +14,7 @@ from os import listdir
 import glob
 import pandas
 import geopandas
-geo = geopandas.read_file('../data/raw/setores_shapefile/ac_setores_censitarios/12SEE250GC_SIR.shp')
+geo = geopandas.read_file('/home/sagemaker-user/reproducible/data/raw/setores_shapefile/ac_setores_censitarios/12SEE250GC_SIR.shp')
 geo.info()
 
 

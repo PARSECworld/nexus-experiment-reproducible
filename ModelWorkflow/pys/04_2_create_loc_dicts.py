@@ -17,31 +17,7 @@
 
 # Downloading Libraries
 
-# In[1]:
-
-
-get_ipython().system('apt-get install -y libproj-dev proj-data proj-bin')
-get_ipython().system('apt-get install -y libgeos-dev')
-get_ipython().system('apt-get install -y -qq libgdal-dev libproj-dev')
-get_ipython().system('pip install cython')
-get_ipython().system('pip install cartopy')
-get_ipython().system('pip install matplotlib')
-
-
 # In[2]:
-
-
-get_ipython().system('pip install matplotlib')
-get_ipython().system('pip install seaborn')
-
-
-# In[3]:
-
-
-get_ipython().system('pip install scikit-learn')
-
-
-# In[4]:
 
 
 from collections import defaultdict
@@ -64,7 +40,7 @@ from utils.plot import boxplot_df, plot_image_by_band
 
 # Important Constants
 
-# In[5]:
+# In[3]:
 
 
 #os.environ['CUDA_VISIBLE_DEVICES'] = ''
@@ -83,7 +59,7 @@ print(len(COUNTRIES))
 
 # Loading the .npz files
 
-# In[7]:
+# In[4]:
 
 
 indicators = ["income","longevity","literacy"]
@@ -107,7 +83,7 @@ for label in indicators:
 
 # ## Load the `loc_dict` (create if necessary)
 
-# In[8]:
+# In[5]:
 
 
 df_data = []
@@ -142,7 +118,7 @@ df.to_csv('df12_literacy.csv', index=False)
 # 
 # NOTE: `year` and `country_year` might differ in the year. `country_year` is the survey ID, which says which year the survey started. However, sometimes the DHS surveys cross the year-boundary, in which case `country_year` will remain the same but `year` will be the next year.
 
-# In[23]:
+# In[6]:
 
 
 def create_loc_dict(loc_dict_path,csv_path,label):
@@ -193,7 +169,7 @@ def create_loc_dict(loc_dict_path,csv_path,label):
 
 # Creating the Loc Dicts for each indicator
 
-# In[28]:
+# In[7]:
 
 
 indicators = ["income","longevity","literacy"]
@@ -215,7 +191,7 @@ for i,label in enumerate(indicators):
 
 # Verifying the loc Dicts Files
 
-# In[11]:
+# In[8]:
 
 
 indicators = ["income"]
@@ -236,7 +212,7 @@ for label in indicators:
     viirs_mask = ~dmsp_mask
 
 
-# In[13]:
+# In[9]:
 
 
 df_data = []
@@ -253,7 +229,7 @@ print(df)
 df.to_csv('df12.csv', index=False)
 
 
-# In[15]:
+# In[10]:
 
 
 indicators = ["income"]
@@ -271,7 +247,7 @@ for i,label in enumerate(indicators):
         loc_dict = pickle.load(f)
 
 
-# In[69]:
+# In[11]:
 
 
 # !! 
@@ -301,7 +277,7 @@ print(f"Tamanho do DataFrame: {df.shape}")
 df.to_csv('df_verificado.csv', index=False)
 
 
-# In[70]:
+# In[12]:
 
 
 # # marcação
@@ -321,7 +297,7 @@ df.to_csv('df_verificado.csv', index=False)
 #     columns=['lat', 'lon', 'label', 'country', 'year', 'nl_mean', 'nl_center'])
 
 
-# In[72]:
+# In[13]:
 
 
 with pd.option_context('display.max_rows', 30):
@@ -336,7 +312,7 @@ with pd.option_context('display.max_rows', 30):
 # 
 # ## Basic Location Stats
 
-# In[73]:
+# In[14]:
 
 
 RADIUS_EARTH = 6356.7523  # in km, polar radius of Earth
@@ -418,17 +394,17 @@ print_loc_stats(locs)
 plot_locs_histogram(locs)
 
 
-# In[74]:
+# In[16]:
 
 
-_ = plot_locs(locs=locs, colors=labels, figsize=[12, 13],
-              title='Income Distribution', cbar_label='income')
-plt.savefig('income.png')
+# _ = plot_locs(locs=locs, colors=labels, figsize=[12, 13],
+#               title='Income Distribution', cbar_label='income')
+# plt.savefig('income.png')
 
 
 # # Create Data Splits
 
-# In[75]:
+# In[17]:
 
 
 def setup_ax(fig):
@@ -478,7 +454,7 @@ def plot_splits(locs_dict, title=None):
 # ```
 # where countries are indexed by their position in `dataset_constants.DHS_COUNTRIES`
 
-# In[76]:
+# In[18]:
 
 
 print(len(locs))
@@ -515,13 +491,13 @@ for i, country in enumerate(values):
 # maximum side_lon: 0.070361
 # ```
 
-# In[77]:
+# In[19]:
 
 
 print(FOLDS)
 
 
-# In[78]:
+# In[20]:
 
 
 def create_incountry_folds(locs, folds_path):
@@ -569,7 +545,7 @@ def create_incountry_folds(locs, folds_path):
     
 
 
-# In[79]:
+# In[21]:
 
 
 incountry_folds_path = '/home/sagemaker-user/reproducible/data/processed/dhs_incountry_co.pkl'
@@ -579,13 +555,13 @@ with open(incountry_folds_path, 'rb') as f:
     incountry_folds = pickle.load(f)
 
 
-# In[80]:
+# In[22]:
 
 
 print(len(locs))
 
 
-# In[81]:
+# In[23]:
 
 
 result = {}
@@ -595,7 +571,7 @@ for f in FOLDS:
     result[f] = locs[valid_indices]
 
 
-# In[82]:
+# In[24]:
 
 
 valid_folds = {f: locs[[i for i in incountry_folds[f]['test'] if i < len(locs)]] for f in FOLDS}
@@ -605,13 +581,13 @@ plot_splits(valid_folds, title='In-country Folds')
 plt.savefig("folds.png")
 
 
-# In[83]:
+# In[25]:
 
 
 countries =["brazil"]
 
 
-# In[84]:
+# In[26]:
 
 
 def plot_counts(folds, countries, country_indices):
@@ -636,7 +612,7 @@ def plot_counts(folds, countries, country_indices):
     
 
 
-# In[85]:
+# In[27]:
 
 
 plot_counts(folds=incountry_folds,
@@ -653,7 +629,7 @@ plt.savefig("ali25.png")
 
 # ## Urban v. Rural
 
-# In[86]:
+# In[28]:
 
 
 def get_urban_rural_indices(locs, loc_dict):
@@ -685,7 +661,7 @@ urban_indices, rural_indices = get_urban_rural_indices(locs, loc_dict)
 
 # # Data Analysis by Country
 
-# In[87]:
+# In[29]:
 
 
 pprint(COUNTRIES, compact=True)
@@ -696,7 +672,7 @@ pprint(YEARS, compact=True)
 
 # ## Size
 
-# In[88]:
+# In[30]:
 
 
 def plot_countries_by_size(df):
@@ -716,7 +692,7 @@ def plot_countries_by_size(df):
 plot_countries_by_size(df)
 
 
-# In[89]:
+# In[31]:
 
 
 with pd.option_context('display.max_rows', 100):
@@ -724,7 +700,7 @@ with pd.option_context('display.max_rows', 100):
     display(counts_series.to_frame())
 
 
-# In[90]:
+# In[32]:
 
 
 def plot_cy_by_size(df, country_year_colors):
@@ -746,151 +722,151 @@ plot_cy_by_size(df, COUNTRY_YEAR_COLORS)
 
 # ## Wealthpooled
 
-# In[91]:
+# In[35]:
 
 
-df_country = df.groupby('country')['wealthpooled'].describe()
-colordisplay(df_country)
-df_country.to_csv('/home/sagemaker-user/reproducible/data/processed/surveys.csv')
+# df_country = df.groupby('country')['wealthpooled'].describe()
+# colordisplay(df_country)
+# df_country.to_csv('/home/sagemaker-user/reproducible/data/processed/surveys.csv')
 
 
-# In[92]:
+# In[36]:
 
 
-boxplot_df(df, y='wealthpooled', by='country',
-           figsize=(8, 5), ylabel='wealthpooled', 
-           title='Wealthpooled distribution by country', 
-           colors=['lightblue' for _ in values])
+# boxplot_df(df, y='wealthpooled', by='country',
+#            figsize=(8, 5), ylabel='wealthpooled', 
+#            title='Wealthpooled distribution by country', 
+#            colors=['lightblue' for _ in values])
 
-boxplot_df(df, y='wealthpooled', by='year',
-           figsize=(4, 4), ylabel='wealthpooled',
-           title='Wealthpooled distribution by year',
-           colors=['lightblue' for _ in YEARS])
+# boxplot_df(df, y='wealthpooled', by='year',
+#            figsize=(4, 4), ylabel='wealthpooled',
+#            title='Wealthpooled distribution by year',
+#            colors=['lightblue' for _ in YEARS])
 
-boxplot_df(df, y='wealthpooled', by=['country', 'year'],
-           figsize=(16, 6), ylabel='wealthpooled',
-           title='Wealthpooled distribution by country_year',
-           colors=COUNTRY_YEAR_COLORS)
+# boxplot_df(df, y='wealthpooled', by=['country', 'year'],
+#            figsize=(16, 6), ylabel='wealthpooled',
+#            title='Wealthpooled distribution by country_year',
+#            colors=COUNTRY_YEAR_COLORS)
 
 
 # ## Urban v. Rural
 
-# In[93]:
+# In[43]:
 
 
-def plot_urban_rural(df, by, color=None, title=None, figsize=(10, 5)):
-    '''
-    Args
-    - df: pd.DataFrame
-    - by: str or list of str, column(s) to group by
-    - color: list of colors
-    - title: str
-    '''
-    fig, ax = plt.subplots(1, 1, figsize=figsize)
-    urban_series = df.groupby(by)['urban'].mean()
-    if color is None:
-        urban_series.plot(kind='bar', ax=ax, width=0.8)
-    else:
-        urban_series.plot(kind='bar', ax=ax, color=color, width=0.8)
-    plt.setp(ax.get_xticklabels(), rotation=60, ha='right',
-             rotation_mode='anchor')
-    if title is not None:
-        ax.set_title(title)
-    ax.grid(True, axis='y')
-    ax.set_ylabel('fraction urban')
-    fig.tight_layout()
+# def plot_urban_rural(df, by, color=None, title=None, figsize=(10, 5)):
+#     '''
+#     Args
+#     - df: pd.DataFrame
+#     - by: str or list of str, column(s) to group by
+#     - color: list of colors
+#     - title: str
+#     '''
+#     fig, ax = plt.subplots(1, 1, figsize=figsize)
+#     urban_series = df.groupby(by)['urban'].mean()
+#     if color is None:
+#         urban_series.plot(kind='bar', ax=ax, width=0.8)
+#     else:
+#         urban_series.plot(kind='bar', ax=ax, color=color, width=0.8)
+#     plt.setp(ax.get_xticklabels(), rotation=60, ha='right',
+#              rotation_mode='anchor')
+#     if title is not None:
+#         ax.set_title(title)
+#     ax.grid(True, axis='y')
+#     ax.set_ylabel('fraction urban')
+#     fig.tight_layout()
 
 
-# In[94]:
+# In[44]:
 
 
-plot_urban_rural(df, by='country', title='Urban fraction by country', figsize=(8, 5))
+# plot_urban_rural(df, by='country', title='Urban fraction by country', figsize=(8, 5))
 
 
-# In[95]:
+# In[45]:
 
 
-plot_urban_rural(df, by=['country', 'year'],
-                 color=COUNTRY_YEAR_COLORS,
-                 title='Urban fraction by country_year',
-                 figsize=(17, 6))
+# plot_urban_rural(df, by=['country', 'year'],
+#                  color=COUNTRY_YEAR_COLORS,
+#                  title='Urban fraction by country_year',
+#                  figsize=(17, 6))
 
 
 # ## Nightlights
 
-# In[108]:
+# In[47]:
 
 
-# !!
-import matplotlib.pyplot as plt
+# # !!
+# import matplotlib.pyplot as plt
 
-def boxplot_df(df, y, by, figsize=None, ylabel=None, title=None, colors=None, ax=None):
-    '''Creates a box-and-whisker plot from a DataFrame.
+# def boxplot_df(df, y, by, figsize=None, ylabel=None, title=None, colors=None, ax=None):
+#     '''Creates a box-and-whisker plot from a DataFrame.
 
-    Args
-    - df: pd.DataFrame, contains columns from `y` and `by`
-    - y: str, name of a column in `df` for the y-axis
-    - by: str or list of str, names of columns in `df` to group by
-    - figsize: list of float, [width, height], in inches
-    - ylabel: str
-    - title: str
-    - colors: list of matplotlib colors, one per group after grouping by `by`
-    - ax: matplotlib.axes.Axes
-    '''
-    fig = None
-    if ax is None:
-        fig, ax = plt.subplots(1, 1, figsize=figsize)
-    bplot = df.boxplot(y, by=by, ax=ax, grid=False, patch_artist=True,
-                       return_type='dict', widths=0.8)
-    if colors is not None:
-        for i, patch in enumerate(bplot[y]['boxes']):
-            patch.set_facecolor(colors[i])
-    ax.grid(True, axis='y')
-    plt.setp(ax.get_xticklabels(), rotation=60, ha='right',
-             rotation_mode='anchor')
-    ax.set_ylabel(ylabel)
-    ax.set_title(title)
-    ax.get_figure().suptitle(None)
-    if fig is not None:
-        fig.tight_layout()
+#     Args
+#     - df: pd.DataFrame, contains columns from `y` and `by`
+#     - y: str, name of a column in `df` for the y-axis
+#     - by: str or list of str, names of columns in `df` to group by
+#     - figsize: list of float, [width, height], in inches
+#     - ylabel: str
+#     - title: str
+#     - colors: list of matplotlib colors, one per group after grouping by `by`
+#     - ax: matplotlib.axes.Axes
+#     '''
+#     fig = None
+#     if ax is None:
+#         fig, ax = plt.subplots(1, 1, figsize=figsize)
+#     bplot = df.boxplot(y, by=by, ax=ax, grid=False, patch_artist=True,
+#                        return_type='dict', widths=0.8)
+#     if colors is not None:
+#         for i, patch in enumerate(bplot[y]['boxes']):
+#             patch.set_facecolor(colors[i])
+#     ax.grid(True, axis='y')
+#     plt.setp(ax.get_xticklabels(), rotation=60, ha='right',
+#              rotation_mode='anchor')
+#     ax.set_ylabel(ylabel)
+#     ax.set_title(title)
+#     ax.get_figure().suptitle(None)
+#     if fig is not None:
+#         fig.tight_layout()
 
-# Verificar o comprimento original do DataFrame e da nova máscara
-print(f"Comprimento original do DataFrame: {len(df)}")
-print(f"Comprimento da nova máscara: {len(dmsp_mask_novo)}")
+# # Verificar o comprimento original do DataFrame e da nova máscara
+# print(f"Comprimento original do DataFrame: {len(df)}")
+# print(f"Comprimento da nova máscara: {len(dmsp_mask_novo)}")
 
-# Aplicar a nova máscara ao DataFrame
-filtered_df = df[dmsp_mask_novo]
+# # Aplicar a nova máscara ao DataFrame
+# filtered_df = df[dmsp_mask_novo]
 
-# Verificar o tamanho dos dados filtrados
-print(f"Tamanho do DataFrame filtrado: {len(filtered_df)}")
+# # Verificar o tamanho dos dados filtrados
+# print(f"Tamanho do DataFrame filtrado: {len(filtered_df)}")
 
-# Verificar se as colunas 'country' e 'year' estão presentes e consistentes
-print(f"Colunas presentes: {filtered_df.columns}")
+# # Verificar se as colunas 'country' e 'year' estão presentes e consistentes
+# print(f"Colunas presentes: {filtered_df.columns}")
 
-# Verificar se há valores ausentes nas colunas 'country' e 'year'
-missing_values = filtered_df[['country', 'year']].isnull().sum()
-print(f"Valores ausentes em 'country': {missing_values['country']}")
-print(f"Valores ausentes em 'year': {missing_values['year']}")
+# # Verificar se há valores ausentes nas colunas 'country' e 'year'
+# missing_values = filtered_df[['country', 'year']].isnull().sum()
+# print(f"Valores ausentes em 'country': {missing_values['country']}")
+# print(f"Valores ausentes em 'year': {missing_values['year']}")
 
-# Verificar os grupos únicos em 'country' e 'year'
-unique_countries = filtered_df['country'].unique()
-unique_years = filtered_df['year'].unique()
-print(f"Países únicos: {unique_countries}")
-print(f"Anos únicos: {unique_years}")
+# # Verificar os grupos únicos em 'country' e 'year'
+# unique_countries = filtered_df['country'].unique()
+# unique_years = filtered_df['year'].unique()
+# print(f"Países únicos: {unique_countries}")
+# print(f"Anos únicos: {unique_years}")
 
-# Chamar a função boxplot_df com verificações
-boxplot_df(filtered_df, y='nl_center', by=['country', 'year'],
-           figsize=(5, 6), ylabel='nl_center',
-           title='Center DMSP distribution by country/year',
-           colors=COUNTRY_YEAR_COLORS)
+# # Chamar a função boxplot_df com verificações
+# boxplot_df(filtered_df, y='nl_center', by=['country', 'year'],
+#            figsize=(5, 6), ylabel='nl_center',
+#            title='Center DMSP distribution by country/year',
+#            colors=COUNTRY_YEAR_COLORS)
 
-boxplot_df(filtered_df, y='nl_mean', by=['country', 'year'],
-           figsize=(5, 6), ylabel='nl_mean',
-           title='Mean DMSP distribution by country/year',
-           colors=COUNTRY_YEAR_COLORS)
+# boxplot_df(filtered_df, y='nl_mean', by=['country', 'year'],
+#            figsize=(5, 6), ylabel='nl_mean',
+#            title='Mean DMSP distribution by country/year',
+#            colors=COUNTRY_YEAR_COLORS)
 
 
-# In[109]:
+# In[48]:
 
 
 # import matplotlib.pyplot as plt
@@ -955,22 +931,22 @@ boxplot_df(filtered_df, y='nl_mean', by=['country', 'year'],
 #            colors=COUNTRY_YEAR_COLORS)
 
 
-# In[111]:
+# In[50]:
 
 
-# !!
-boxplot_df(filtered_df, y='nl_center', by=['country', 'year'],
-           figsize=(5, 6), ylabel='nl_center',
-           title='Center DMSP distribution by country/year',
-           colors=COUNTRY_YEAR_COLORS)
+# # !!
+# boxplot_df(filtered_df, y='nl_center', by=['country', 'year'],
+#            figsize=(5, 6), ylabel='nl_center',
+#            title='Center DMSP distribution by country/year',
+#            colors=COUNTRY_YEAR_COLORS)
 
-boxplot_df(filtered_df, y='nl_mean', by=['country', 'year'],
-           figsize=(5, 6), ylabel='nl_mean',
-           title='Mean DMSP distribution by country/year',
-           colors=COUNTRY_YEAR_COLORS)
+# boxplot_df(filtered_df, y='nl_mean', by=['country', 'year'],
+#            figsize=(5, 6), ylabel='nl_mean',
+#            title='Mean DMSP distribution by country/year',
+#            colors=COUNTRY_YEAR_COLORS)
 
 
-# In[112]:
+# In[51]:
 
 
 # boxplot_df(df[dmsp_mask], y='nl_center', by=['country', 'year'],
@@ -990,7 +966,7 @@ boxplot_df(filtered_df, y='nl_mean', by=['country', 'year'],
 
 # ## Wealthpooled
 
-# In[117]:
+# In[52]:
 
 
 # !!
@@ -1028,7 +1004,7 @@ def plot_labels_by_fold(labels, folds, title=None):
 plot_labels_by_fold(labels, incountry_folds, title='Wealthpooled distribution by fold (incountry)')
 
 
-# In[118]:
+# In[53]:
 
 
 # def plot_labels_by_fold(labels, folds, title=None):
@@ -1057,7 +1033,7 @@ plot_labels_by_fold(labels, incountry_folds, title='Wealthpooled distribution by
 # plot_labels_by_fold(labels, incountry_folds, title='Wealthpooled distribution by fold (incountry)')
 
 
-# In[122]:
+# In[54]:
 
 
 # !!
@@ -1095,7 +1071,7 @@ def plot_label_hists(labels, folds, title=None):
 plot_label_hists(labels, incountry_folds, title='label distribution (incountry)')
 
 
-# In[123]:
+# In[55]:
 
 
 # def plot_label_hists(labels, folds, title=None):
@@ -1128,7 +1104,7 @@ plot_label_hists(labels, incountry_folds, title='label distribution (incountry)'
 
 # ## Urban v. Rural
 
-# In[124]:
+# In[56]:
 
 
 def plot_urban_by_fold(urban, folds, title=None):
@@ -1155,15 +1131,15 @@ def plot_urban_by_fold(urban, folds, title=None):
     fig.tight_layout()
 
 
-# In[125]:
+# In[58]:
 
 
-plot_urban_by_fold(df['urban'].values, incountry_folds, title='Urban/rural distribution by fold (incountry)')
+# plot_urban_by_fold(df['urban'].values, incountry_folds, title='Urban/rural distribution by fold (incountry)')
 
 
 # ## Nightlights
 
-# In[139]:
+# In[59]:
 
 
 # !! 
@@ -1219,20 +1195,20 @@ def plot_nl_by_fold(df, folds, col, dmsp, title=None):
 plot_nl_by_fold(df, incountry_folds, col='nl_mean', dmsp=True, title='DMSP nl_mean distribution (incountry)')
 
 
-# In[140]:
+# In[60]:
 
 
 # !!
 plot_nl_by_fold(df, incountry_folds, col='nl_center', dmsp=True, title='DMSP nl_center distribution (incountry)')
 
 
-# In[141]:
+# In[ ]:
 
 
 # plot_nl_by_fold(df, incountry_folds, col='nl_center', dmsp=True, title='DMSP nl_center distribution (incountry)')
 
 
-# In[142]:
+# In[ ]:
 
 
 # def plot_nl_by_fold(df, folds, col, dmsp, title=None):
@@ -1273,7 +1249,7 @@ plot_nl_by_fold(df, incountry_folds, col='nl_center', dmsp=True, title='DMSP nl_
 # plot_nl_by_fold(df, incountry_folds, col='nl_mean', dmsp=True, title='DMSP nl_mean distribution (incountry)')
 
 
-# In[145]:
+# In[61]:
 
 
 # !!
@@ -1322,7 +1298,7 @@ def nl_boxplots_by_fold(df, folds, col, dmsp, title=None):
 nl_boxplots_by_fold(df, incountry_folds, col='nl_center', dmsp=True, title='DMSP nl_center distribution (incountry)')
 
 
-# In[146]:
+# In[ ]:
 
 
 # def nl_boxplots_by_fold(df, folds, col, dmsp, title=None):
@@ -1361,32 +1337,32 @@ nl_boxplots_by_fold(df, incountry_folds, col='nl_center', dmsp=True, title='DMSP
 
 # # All-Zero NL
 
-# In[149]:
+# In[63]:
 
 
-# !!
-# Verificar o comprimento da máscara original e do DataFrame
-print(f"Comprimento original do DataFrame: {len(df)}")
-print(f"Comprimento da máscara: {len(dmsp_mask)}")
+# # !!
+# # Verificar o comprimento da máscara original e do DataFrame
+# print(f"Comprimento original do DataFrame: {len(df)}")
+# print(f"Comprimento da máscara: {len(dmsp_mask)}")
 
-# Criar uma nova máscara baseada no DataFrame atual
-dmsp_mask_novo = dmsp_mask[:len(df)]
+# # Criar uma nova máscara baseada no DataFrame atual
+# dmsp_mask_novo = dmsp_mask[:len(df)]
 
-# Verificar se a nova máscara tem o mesmo comprimento do DataFrame
-print(f"Comprimento da nova máscara: {len(dmsp_mask_novo)}")
+# # Verificar se a nova máscara tem o mesmo comprimento do DataFrame
+# print(f"Comprimento da nova máscara: {len(dmsp_mask_novo)}")
 
-# Criar o DataFrame zeros_df usando a nova máscara
-zeros_df = pd.DataFrame({
-    'DMSP': [DMSP_ZERO,
-             df.loc[dmsp_mask_novo, 'nl_center'].min(),
-             df.loc[dmsp_mask_novo, 'nl_mean'].min()],
-}, index=['True 0', 'min nls_center', 'min nls_mean'])
+# # Criar o DataFrame zeros_df usando a nova máscara
+# zeros_df = pd.DataFrame({
+#     'DMSP': [DMSP_ZERO,
+#              df.loc[dmsp_mask_novo, 'nl_center'].min(),
+#              df.loc[dmsp_mask_novo, 'nl_mean'].min()],
+# }, index=['True 0', 'min nls_center', 'min nls_mean'])
 
-with pd.option_context('precision', 9):
-    display(zeros_df)
+# with pd.option_context('precision', 9):
+#     display(zeros_df)
 
 
-# In[147]:
+# In[64]:
 
 
 # MEANS = dataset_constants.MEANS_DICT[DATASET]
@@ -1404,55 +1380,55 @@ with pd.option_context('precision', 9):
 #     display(zeros_df)
 
 
-# In[150]:
+# In[66]:
 
 
-dmsp_zero_mask = dmsp_mask & (nls_mean == DMSP_ZERO)
-zeros_label_df = pd.DataFrame({
-    'label, when DMSP is all-zero': labels[dmsp_zero_mask]
-})
-display(zeros_label_df.describe().T)
+# dmsp_zero_mask = dmsp_mask & (nls_mean == DMSP_ZERO)
+# zeros_label_df = pd.DataFrame({
+#     'label, when DMSP is all-zero': labels[dmsp_zero_mask]
+# })
+# display(zeros_label_df.describe().T)
 
-fig, ax = plt.subplots(1, 1, figsize=(4, 3))
-ax.hist(labels[dmsp_zero_mask], bins=50)
-ax.set(xlabel='label', ylabel='count', title='Histogram of labels when DMSP is all-0')
-ax.grid(True)
-fig.tight_layout()
-
-
-# In[152]:
+# fig, ax = plt.subplots(1, 1, figsize=(4, 3))
+# ax.hist(labels[dmsp_zero_mask], bins=50)
+# ax.set(xlabel='label', ylabel='count', title='Histogram of labels when DMSP is all-0')
+# ax.grid(True)
+# fig.tight_layout()
 
 
-# !!
-# Verificar o comprimento da máscara original e do DataFrame
-print(f"Comprimento original do DataFrame: {len(df)}")
-print(f"Comprimento da máscara: {len(dmsp_zero_mask)}")
-
-# Ajustar a máscara para ter o mesmo comprimento do DataFrame
-if len(dmsp_zero_mask) != len(df):
-    dmsp_zero_mask = dmsp_zero_mask[:len(df)]
-
-# Verificar se a nova máscara tem o mesmo comprimento do DataFrame
-print(f"Comprimento da nova máscara: {len(dmsp_zero_mask)}")
-
-# Adicionar a nova máscara ao DataFrame
-df['zero_nl'] = dmsp_zero_mask
-
-# Calcular os contagens e frações
-zero_nl_counts = df.groupby('country')['zero_nl'].sum().astype(int)
-zero_nl_frac = zero_nl_counts / df.groupby('country').size()
-
-# Plotar os gráficos
-fig, axs = plt.subplots(1, 2, sharey=True, figsize=(10, 5))
-zero_nl_counts.plot.barh(width=0.8, ax=axs[0], grid=True)
-zero_nl_frac.plot.barh(width=0.8, ax=axs[1], grid=True)
-axs[0].set_xlabel('count')
-axs[1].set_xlabel('fraction')
-fig.suptitle('All-0 DMSP Nightlights', y=1.02)
-fig.tight_layout()
+# In[68]:
 
 
-# In[153]:
+# # !!
+# # Verificar o comprimento da máscara original e do DataFrame
+# print(f"Comprimento original do DataFrame: {len(df)}")
+# print(f"Comprimento da máscara: {len(dmsp_zero_mask)}")
+
+# # Ajustar a máscara para ter o mesmo comprimento do DataFrame
+# if len(dmsp_zero_mask) != len(df):
+#     dmsp_zero_mask = dmsp_zero_mask[:len(df)]
+
+# # Verificar se a nova máscara tem o mesmo comprimento do DataFrame
+# print(f"Comprimento da nova máscara: {len(dmsp_zero_mask)}")
+
+# # Adicionar a nova máscara ao DataFrame
+# df['zero_nl'] = dmsp_zero_mask
+
+# # Calcular os contagens e frações
+# zero_nl_counts = df.groupby('country')['zero_nl'].sum().astype(int)
+# zero_nl_frac = zero_nl_counts / df.groupby('country').size()
+
+# # Plotar os gráficos
+# fig, axs = plt.subplots(1, 2, sharey=True, figsize=(10, 5))
+# zero_nl_counts.plot.barh(width=0.8, ax=axs[0], grid=True)
+# zero_nl_frac.plot.barh(width=0.8, ax=axs[1], grid=True)
+# axs[0].set_xlabel('count')
+# axs[1].set_xlabel('fraction')
+# fig.suptitle('All-0 DMSP Nightlights', y=1.02)
+# fig.tight_layout()
+
+
+# In[69]:
 
 
 # df['zero_nl'] = dmsp_zero_mask
@@ -1470,7 +1446,7 @@ fig.tight_layout()
 
 # # Visualize Images
 
-# In[154]:
+# In[70]:
 
 
 import batchers.batcher1 as batcher
@@ -1478,7 +1454,7 @@ tfrecord_paths = np.asarray(batcher.get_tfrecord_paths(dataset=DATASET, split='a
 K = 1
 
 
-# In[155]:
+# In[71]:
 
 
 def get_images(tfrecord_paths):
@@ -1505,7 +1481,7 @@ def get_images(tfrecord_paths):
     return images
 
 
-# In[156]:
+# In[72]:
 
 
 def plot_images_by_wealth(indices, images, labels, years, locs,
@@ -1535,7 +1511,7 @@ def plot_images_by_wealth(indices, images, labels, years, locs,
 
 # ## Random Sampling
 
-# In[157]:
+# In[73]:
 
 
 import random
@@ -1547,4 +1523,16 @@ plot_images_by_wealth(indices, images, labels, years, locs,
                       country_labels=country_labels,
                       countries=COUNTRIES,
                       title_str=title_str)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
