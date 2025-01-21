@@ -7,40 +7,25 @@ Below is the **Nexus Experiment README** in **English**, which includes the sing
 This repository contains the implementation of the **Nexus Experiment**, which aims to estimate socio-economic indicators (such as income, literacy, and longevity) from satellite imagery in the Caatinga and Cerrado regions of Brazil. The proposed architecture integrates several tools to ensure **reproducibility** in large-scale data science projects, including:
 
 - **Amazon S3** (data storage)  
-- DVC (Data Version Control)** (versioning of data and models)  
-- Git** (source code version control)  
-- Docker (consistent runtime environments)  
-- MLflow (experiment tracking)  
-- Apache Airflow (pipeline orchestration)  
-- Amazon SageMaker** (optional, for managed execution of experiments)
+- **DVC (Data Version Control)** (versioning of data and models)  
+- **Git** (source code version control)  
+- **Docker** (consistent runtime environments)  
+- **MLflow** (experiment tracking)  
+- **Apache Airflow** (pipeline orchestration)  
+- **Amazon SageMaker** (optional, for managed execution of experiments)
 
 This experiment is part of the **NEXUS-PARSEC** project and was developed as a practical case study for your master thesis on **computational architectures for reproducible deep learning experiments**.
-
----
-
-## Table of Contents
-
-1. [Experiment Overview](#experiment-overview)  
-2. [Prerequisites](#Prerequisites)  
-3. [Input Data Acquisition](#input-data-acquisition)  
-4. [Notebooks and Execution Order](#notebooks-and-execution-order)  
-5. [Important Configurations](#important-configurations)  
-6. [Execution and Docker Usage (Airflow + MLflow)](#execution-and-docker-usage-airflow--mlflow)  
-7. [Experiment Outputs](#experiment-outputs)  
-8. [Citation](#citation)
-
----
 
 ## Experiment Overview
 
 This experiment includes
 
 1. **Preparing census data** and creating `clusters' (square regions of ~6.72 km² each) to serve as samples for the machine learning model.  
-2. **Downloading and processing satellite imagery (multispectral and night light) using Google Earth Engine (GEE).  
+2. **Downloading and processing satellite imagery** (multispectral and night light) using Google Earth Engine (GEE).  
 3. **Train deep learning models (using an adapted ResNet-18) to predict socio-economic indicators (focusing on **income**).  
-4. **Evaluate the models using spatially independent cross-validation (no image overlap between training and testing).  
-5. **Compare different approaches (multispectral bands only, night light only, or a combination of both) using linear regression (ridge) applied to features extracted from the deep learning models.  
-6. **Record and analyze results in MLflow, TensorBoard, and Airflow to ensure reproducibility.
+4. **Evaluate the models** using spatially independent cross-validation (no image overlap between training and testing).  
+5. **Compare different approaches** (multispectral bands only, night light only, or a combination of both) using linear regression (ridge) applied to features extracted from the deep learning models.  
+6. **Record and analyze results** in MLflow and Airflow to ensure reproducibility.
 
 ---
 
@@ -50,10 +35,10 @@ To reproduce the experiment in an environment similar to the one described in th
 
 1. **Git**.  
 2. **DVC (Data Version Control)**.  
-3. **Docker  
-4. **MLflow  
-5. **Apache Airflow  
-6. **Amazon S3 (or other scalable storage system)  
+3. **Docker**
+4. **MLflow**
+5. **Apache Airflow**
+6. **Amazon S3** (or other scalable storage system)  
 7. **Google Cloud Account** with access to **Google Earth Engine (GEE)** (to download images)  
 8. **Amazon SageMaker** (optional if you want a managed environment)  
 9. **Minimum 120 GB** of available space for intermediate data (~6.72 km² per cluster and satellite composites).  
