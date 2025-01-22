@@ -29,15 +29,15 @@ This experiment includes
 
 To reproduce the experiment in an environment similar to the one described in the thesis, please ensure that you have (or can configure) the following components:
 
-1. **Git**.  
-2. **DVC (Data Version Control)**.  
+1. **Git**
+2. **DVC (Data Version Control)**
 3. **Docker**
 4. **MLflow**
 5. **Apache Airflow**
 6. **Amazon S3** (or other scalable storage system)  
 7. **Google Cloud Account** with access to **Google Earth Engine (GEE)** (to download images)  
 8. **Amazon SageMaker** (optional if you want a managed environment)  
-9. **Minimum 120 GB** of available space for intermediate data (~6.72 km² per cluster and satellite composites).  
+9. **Minimum 120 GB** of available space for intermediate data (~6.72 km² per cluster and satellite composites)
 10. A **compute instance** equivalent to `ml.m5.4xlarge` from AWS for the most intensive steps (especially notebook `04_loc_dicts_and_exploratory_analysis.ipynb`), or any instance with similar resources (16 vCPUs, 64 GB RAM).
 
 ### Note on pre-trained weights (ResNet-18)
