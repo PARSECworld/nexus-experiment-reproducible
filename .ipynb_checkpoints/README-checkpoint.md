@@ -1,7 +1,3 @@
-Below is the **Nexus Experiment README** in **English**, which includes the single section for **Execution and Docker usage (Airflow + MLflow)**:
-
----
-
 # Nexus Experiment - Reproducibility in Deep Learning
 
 This repository contains the implementation of the **Nexus Experiment**, which aims to estimate socio-economic indicators (such as income, literacy, and longevity) from satellite imagery in the Caatinga and Cerrado regions of Brazil. The proposed architecture integrates several tools to ensure **reproducibility** in large-scale data science projects, including:
@@ -22,7 +18,7 @@ This experiment includes
 
 1. **Preparing census data** and creating `clusters' (square regions of ~6.72 km² each) to serve as samples for the machine learning model.  
 2. **Downloading and processing satellite imagery** (multispectral and night light) using Google Earth Engine (GEE).  
-3. **Train deep learning models (using an adapted ResNet-18) to predict socio-economic indicators (focusing on **income**).  
+3. **Train deep learning models** (using an adapted ResNet-18) to predict socio-economic indicators (focusing on income).  
 4. **Evaluate the models** using spatially independent cross-validation (no image overlap between training and testing).  
 5. **Compare different approaches** (multispectral bands only, night light only, or a combination of both) using linear regression (ridge) applied to features extracted from the deep learning models.  
 6. **Record and analyze results** in MLflow and Airflow to ensure reproducibility.
@@ -46,7 +42,7 @@ To reproduce the experiment in an environment similar to the one described in th
 
 ### Note on pre-trained weights (ResNet-18)
 
-- If the code is configured to use **pretrained ImageNet weights** (e.g. `ImageNet-ResNet18.npz`), make sure the file is included in the repository or downloaded from an external source.  
+- If the code is configured to use pretrained ImageNet weights (e.g. `ImageNet-ResNet18.npz`), make sure the file is included in the repository or downloaded from an external source.  
 - You can also train the network from scratch (which typically requires more computational resources and parameter tuning) by disabling the load pre-trained weights step in the notebook.
 
 ---
@@ -66,7 +62,7 @@ To reproduce the experiment in an environment similar to the one described in th
 1. **GEE Account**: [Sign up here](https://earthengine.google.com/signup/).  
 2. **Service Account and Credentials**:  
    - Create a `client_secret.json` file in the Google Cloud Console with permissions for Earth Engine and Google Drive.  
-   - Customize the paths in the **`01_download_satellite_images.ipynb`** notebook (`SERVICE_ACCOUNT_FILE`, `TOKEN_FILE_NAME`, etc.).  
+   - Customize the paths in the `01_download_satellite_images.ipynb` notebook (`SERVICE_ACCOUNT_FILE`, `TOKEN_FILE_NAME`, etc.).  
 3. **Drive or GCS**: Check the permissions to export and save the satellite images.
 
 ---
@@ -75,43 +71,43 @@ To reproduce the experiment in an environment similar to the one described in th
 
 We have renamed the notebooks to better reflect each stage. Run them in the following order:
 
-1. **00_data_preparation_and_clustering.ipynb`**  
+1. **00_data_preparation_and_clustering.ipynb`  
    - Reads and merges census shapefiles.  
    - Reads and merges socio-economic indicators (CSV).  
    - Generates *clusters* (grid) and calculates associated indicators.  
    - Saves merged data to CSV.
 
-2. **`01_download_satellite_images.ipynb`**  
+2. `01_download_satellite_images.ipynb`  
    - Uses Google Earth Engine to compile and export Landsat and Night Light imagery.  
    - Exports to Google Drive or GCS in TFRecord format.  
    - (Optional) Download these TFRecords locally.
 
-3. **`02_preprocess_tfrecords.ipynb`**.  
+3. `02_preprocess_tfrecords.ipynb`.  
    - Reads raw TFRecord files.  
    - Validates, groups and splits each TFRecord by cluster.  
    - Computes band statistics (means, standard deviations).
 
-4. **`03_create_spatial_folds.ipynb`** Creates spatial folds.  
+4. `03_create_spatial_folds.ipynb` Creates spatial folds.  
    - Creates folds (A, B, C, D, E) ensuring spatial independence (minimum distance between training/test clusters).  
    - Generates a `.pkl` file describing the assignment of clusters to each fold.
 
-5. **`04_loc_dicts_and_exploratory_analysis.ipynb`**  
+5. `04_loc_dicts_and_exploratory_analysis.ipynb`  
    - Loads `.npz` files containing bands and indicators.  
    - Creates location dictionaries (`loc_dict`) mapping clusters to attributes (country, urban/rural, etc.).  
    - Performs exploratory analysis (income distribution, night lights, etc.).  
    - **Note**: This step was run on an AWS `ml.m5.4xlarge` instance due to the large amount of data.
 
-6. **`05_train_deep_learning_income.ipynb`**  
+6. `05_train_deep_learning_income.ipynb`  
    - Trains deep learning models (adapted ResNet-18) for **income**, using multispectral bands (and/or night light, if configured).  
    - Tunes hyperparameters, performs cross-validation, and stores model checkpoints.  
    - (Optional) Uses pre-trained ImageNet weights, if available.
 
-7. **`06_train_ridge_combination_income.ipynb`**  
+7. `06_train_ridge_combination_income.ipynb`  
    - Loads features extracted from the DL models (MS, NL).  
    - Trains a ridge regression model combining (or not) these features.  
    - Evaluates whether merging bands (MS + NL) improves performance.
 
-8. **`07_evaluate_models_income.ipynb`**  
+8. `07_evaluate_models_income.ipynb`  
    - Evaluates all models (pure DL and Ridge on features).  
    - Compares metrics (R², MSE, correlation) and performs urban/rural analysis.  
    - Generates reports, scatterplots, histograms, etc.
@@ -134,7 +130,7 @@ We have renamed the notebooks to better reflect each stage. Run them in the foll
 
 ## Execution and Docker Usage (Airflow + MLflow)
 
-The following is a general workflow for running the notebooks, as well as instructions for spinning up the **Airflow + MLflow** Docker container with **Supervisor**.
+The following is a general workflow for running the notebooks, as well as instructions for spinning up the Airflow + MLflow Docker container with Supervisor.
 
 ### 1. Clone the repository and initialize DVC
 
@@ -149,10 +145,10 @@ dvc pull
 ### 2. (Optional) Build the docker image
 
 Inside the repository, locate the `Dockerfile' that sets up:
-- **Python 3.9-slim**.
-- Airflow 2.5.1** (demo using SQLite)
-- MLflow 2.3.2**.
-- **Supervisor** to manage the processes (Airflow Webserver, Airflow Scheduler, MLflow Server)
+- Python 3.9-slim.
+- Airflow 2.5.1 (demo using SQLite)
+- MLflow 2.3.2.
+- Supervisor to manage the processes (Airflow Webserver, Airflow Scheduler, MLflow Server)
 
 To create the image:
 
@@ -194,7 +190,7 @@ docker run -it --rm \
 
 Several strategies can be used:
 
-- **Bind mount** a local directory:
+- Bind mount a local directory:
   ```bash
   docker run -it --rm \
       -v $(pwd):/app \
@@ -234,23 +230,23 @@ If you prefer not to use Docker, you can:
 
 In the end, you should have various files in `../data/processed/` (or any other configured path). Some examples:
 
-- **Clusters and indicators**.  
+- Clusters and indicators.  
   * `../data/processed/NEXUS_data_2010.csv`.  
   * `../data/processed/clusters_data_{cluster_image_length}km.csv`.  
 
-- Satellite Images in TFRecord**.  
+- Satellite Images in TFRecord.  
   * `../data/raw/nexus_tfrecords_raw/brazil_2010_XX.tfrecord.gz` (raw exports from GEE)  
   * `../data/processed/nexus_tfrecords_processed/brazil_2010/00XXX.tfrecord.gz` (split by cluster)  
 
-- Folders (Spatial Independence)**.  
+- Folders (Spatial Independence).  
   * `../data/processed/dhs_incountry_co.pkl` (training/validation/testing indices for each fold)  
 
-- Deep Learning Models (Checkpoints)**.  
+- Deep Learning Models (Checkpoints).  
   * `../models/checkpoints/<experiment_name>/ckpt-XX.data-00000-of-00001`.  
   * `../models/checkpoints/<experiment_name>/ckpt-XX.index`.  
   *(or other configured directories, e.g. `./final_ex/income/dhs_incountry/`)*.  
 
-- Extracted Features (NPZ)**.  
+- Extracted Features (NPZ).  
   * `../data/processed/features/<model>_features.npz`.  
   *(e.g., `resnet_ms_features.npz`, `resnet_nl_features.npz`, etc.)*.  
 
