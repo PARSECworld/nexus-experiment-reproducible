@@ -71,7 +71,7 @@ To reproduce the experiment in an environment similar to the one described in th
 
 We have renamed the notebooks to better reflect each stage. Run them in the following order:
 
-1. **00_data_preparation_and_clustering.ipynb`  
+1. `00_data_preparation_and_clustering.ipynb`
    - Reads and merges census shapefiles.  
    - Reads and merges socio-economic indicators (CSV).  
    - Generates *clusters* (grid) and calculates associated indicators.  
